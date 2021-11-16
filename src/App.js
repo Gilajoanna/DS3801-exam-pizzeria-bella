@@ -1,9 +1,10 @@
 import React from "react";
 import { useEffect, useState } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 
 import Navbar from './components/Navbar';
+import MenuList from './components/MenuList';
 
 
 function App() {
@@ -110,11 +111,10 @@ function App() {
     
 
   return (
-    
-      <div className="App">
-        <Navbar></Navbar>        
-      </div>
-  
+    <div className="App">
+        <Navbar></Navbar>  
+        <MenuList menuList={statePizza}/> 
+    </div>
   );
 }
 
