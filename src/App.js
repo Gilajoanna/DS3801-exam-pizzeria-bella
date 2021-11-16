@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
+import images from './images/images';
 import PizzaList from './components/PizzaList';
 import PastaList from './components/PastaList';
 import AddOnsList from './components/AddOnsList';
@@ -116,7 +117,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route exact path="/" element={<Home/>}/>
+          <Route exact path="/" element={<Home img={ images[0] }/>}/>
           <Route exact path="/" element={<PizzaList/>}/>
           <Route exact path="/" element={<PastaList/>}/>
           <Route exact path="/" element={<AddOnsList/>}/>

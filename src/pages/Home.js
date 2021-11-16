@@ -4,11 +4,11 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import HeroImg from '../components/HeroImg';
 
-function Home() {
+function Home(props) {
     return(
-        <Container maxWidth="md">
+        <Container maxWidth="xl">
             <Navbar />
-            <HeroImg />
+            <HeroImg img={ props.img } />
         </Container>
     )
 }

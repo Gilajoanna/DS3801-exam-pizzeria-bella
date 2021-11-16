@@ -1,3 +1,0 @@
-const heroImg = [
-    "homeHero.png"
-];
