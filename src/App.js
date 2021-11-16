@@ -1,10 +1,12 @@
 import React from "react";
 import { useEffect, useState } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-
-import Navbar from './components/Navbar';
-import MenuList from './components/MenuList';
+import Home from './pages/Home';
+import PizzaList from './components/PizzaList';
+import PastaList from './components/PastaList';
+import AddOnsList from './components/AddOnsList';
+import DrinkList from './components/DrinkList';
 
 
 function App() {
@@ -49,7 +51,7 @@ function App() {
       {name:"AIOLI", description:"", allergens:"EGG", price: 30 }
     ])
 
-    const [stateDrinks, setStateDrinks] = useState (() => [
+    const [stateDrink, setStateDrink] = useState (() => [
       {name:"SAN PELLEGRINO", description:"Mineral water with carbon dioxide, 75 cl", price: 99 },
       {name:"GAZZOSA", description:"Italian lemon soda, 27.5 cl", price: 59 },
       {name:"ARANCIATA", description:"Italian orange soda, 27.5 cl", price: 59 },
@@ -85,8 +87,8 @@ function App() {
       })
     }
 
-    const addDrinToCart = (name, description, price) => {
-      setStateDrinks(prevState => {
+    const addDrinkToCart = (name, description, price) => {
+      setStateDrink(prevState => {
         return [...prevState, {name, description, price}]
       })
     }
@@ -106,15 +108,25 @@ function App() {
     }, [stateAddOns])
 
     useEffect(() => {
-      console.log(stateDrinks)
-    }, [stateDrinks])
+      console.log(stateDrink)
+    }, [stateDrink])
     
 
   return (
     <div className="App">
-        <Navbar></Navbar>  
-        <MenuList menuList={statePizza}/> 
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/">
+            <Home />
+          </Route>
+            <PizzaList pizzaList={statePizza}/> 
+            <PastaList pastaList={statePasta}/>
+            <AddOnsList addOndList={stateAddOns}/>
+            <DrinkList drinkList={stateDrink}/>
+        </Routes>
+      </BrowserRouter>
     </div>
+    
   );
 }
 
