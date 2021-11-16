@@ -5,9 +5,10 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
 
+
 function App() {
 
-    const pizza = [state, setStatePizza] = useState (() => [
+    const [statePizza, setStatePizza] = useState (() => [
         {name: "MARGHERITA", description: "Tomato sauce, mozzarella, basil, oregano", allergens:"WHEAT, MILK", price: 189 },
         {name: "PIZZA ALLA SALSICCIA", description: "Tomato sauce, mozzarella, Salsiccia piccante, olives, red onion, ruccula, parmesan", allergens:"WHEAT, MILK", price:229 },
         {name: "PIZZA POLLO", description: "Tomato sauce, mozzarella, chicken, red onion, garlic, olives, ruccula, pesto rosso, parmesan", allergens:"WHEAT, MILK, CASHEW NUTS", price: 229 },
@@ -20,7 +21,7 @@ function App() {
         {name: "INFERNO", description: "Tomato sauce, mozzarella, Negrini salami spicy pepperoni, marinated chili pepper", allergens:"WHEAT, MILK", price: 229 }
     ])
 
-    const pasta = [state, setStatePasta] = useState (() => [
+    const [statePasta, setStatePasta] = useState (() => [
         {name:"RISOTTO ALLA VENTRICINA", description:"Risotto, ventricina salami, tomato, onion, garlic and parmesan", allergens:"MILK, SULPHITES", price: 215 },
         {name:"RISOTTO AI FUNGHI PORCINI", description:"Risotto, mushrooms, onions, garlic, white wine, parmesan", allergens:"MILK, SULPHITES", price:215 },
         {name:"SPAGHETTI CONN PICCANTE SALSICCIA", description:"Fresh spaghetti with Salsiccia piccante, tomato sauce, fennel and parmesan", allergens:"WHEAT, DURUM WHEAT, MILK, CELERY", price: 229},
@@ -33,7 +34,7 @@ function App() {
         {name:"STROZZAPRETI CON POLLO", description:"Fresh strozzapreti, chicken fillet, bacon, peppers, spring onions, garlic, cream and basil", allergens:"WHEAT, DURUM WHEAT, EGGS, MILK, CELERY, SULPHITES", price: 229 }
     ])
 
-    const addOns = [state, setStateAsddOns] = useState (() => [
+    const [stateAddOns, setStateAddOns] = useState (() => [
       {name:"BRUSCHETTA CON AVOCADO E PROSCIUTTO DI PARMA", description:"Grilled country bread with avocado, parma ham, cherry tomato, red onion, garlic, pesto rosso and mozzarella", allergens:"WHEAT, RYE, MILK, PINE NUTS", price: 185 },
       {name:"BRUSCHETTA AL POMODORO E BASILICO", description:"Grilled country bread with cherry tomato, garlic, basil, olive oil and parmesan", allergens:"WHEAT, RYE, MILK", price: 155 },
       {name:"BRUSCHETTA CON FUNGHI PORCINI", description:"Grilled country bread with stone mushroom puree", allergens:"WHEAT, RYE, MILK, SOY", price: 185 },
@@ -47,7 +48,7 @@ function App() {
       {name:"AIOLI", description:"", allergens:"EGG", price: 30 }
     ])
 
-    const drinks = [state, setStateDrinks] = useState (() => [
+    const [stateDrinks, setStateDrinks] = useState (() => [
       {name:"SAN PELLEGRINO", description:"Mineral water with carbon dioxide, 75 cl", price: 99 },
       {name:"GAZZOSA", description:"Italian lemon soda, 27.5 cl", price: 59 },
       {name:"ARANCIATA", description:"Italian orange soda, 27.5 cl", price: 59 },
@@ -66,41 +67,54 @@ function App() {
 
 
     const addPizzaToCart = (name, description, allergens, price) => {
-      setState(prevState => {
+      setStatePizza(prevState => {
         return [...prevState, {name, description, allergens, price}]
       })
     }
 
     const addPastaToCart = (name, description, allergens, price) => {
-      setState(prevState => {
+      setStatePasta(prevState => {
         return [...prevState, {name, description, allergens, price}]
       })
     }
 
     const addAddOnToCart = (name, description, allergens, price) => {
-      setState(prevState => {
+      setStateAddOns(prevState => {
         return [...prevState, {name, description, allergens, price}]
       })
     }
 
     const addDrinToCart = (name, description, price) => {
-      setState(prevState => {
+      setStateDrinks(prevState => {
         return [...prevState, {name, description, price}]
       })
     }
 
     useEffect(() => {
-      console.log(state)
-    }, [state])
+      console.log(statePizza)
+    }, [statePizza])
+    
+    
+    useEffect(() => {
+      console.log(statePasta)
+    }, [statePasta])
 
+  
+    useEffect(() => {
+      console.log(stateAddOns)
+    }, [stateAddOns])
+
+    useEffect(() => {
+      console.log(stateDrinks)
+    }, [stateDrinks])
     
+
   return (
-    <BrowserRouter>
-      <div className="App">
-        <Navbar></Navbar>
-      </div>
-    </BrowserRouter>
     
+      <div className="App">
+        <Navbar></Navbar>        
+      </div>
+  
   );
 }
 
