@@ -114,6 +114,7 @@ function App() {
     <div className="App">
         <Navbar></Navbar>  
         <MenuList menuList={statePizza}/> 
+        <MenuList menuList={statePasta}/>
     </div>
   );
 }

@@ -19,6 +19,11 @@ export default function MenuList({menuList, addPizzaToCart}) {
                     return <Grid item xs={12} lg={6} key={index}><MenuCard pizza={pizza}/></Grid>
                 })}
             </Grid>
+            <Grid container spacing={3}>
+                {menuList.map((pasta, index) => {
+                    return <Grid item xs={12} lg={6} key={index}><MenuCard pasta={pasta}/></Grid>
+                })}
+            </Grid>
         </Container>
     )
 }
