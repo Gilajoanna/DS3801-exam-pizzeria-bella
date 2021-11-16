@@ -12,7 +12,9 @@ export default function PizzaList({pizzaList, addPizzaToCart}) {
     }
     */
 
+
     return (
+        
         <Container maxWidth="md"> 
             <Grid container spacing={3}>
                 {pizzaList.map((pizza, index) => {
