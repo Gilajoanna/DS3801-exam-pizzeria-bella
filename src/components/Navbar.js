@@ -1,4 +1,5 @@
 import { Toolbar, Typography } from "@mui/material";
+import { Link } from 'react-router-dom'
 import React from "react";
 
 function Navbar() {
@@ -11,9 +12,9 @@ function Navbar() {
                     variant="h5"
                     color="inherit"
                     noWrap
-                    sx={{ flex }}
+                    //sx={{ flex }}
                 >
-                    <Link style={{ textDecoration: 'none', color: 'inherit' }}>Pizza Bella</Link>
+                Hej Hej    
                 </Typography>    
             </Toolbar>
         </navbar>
