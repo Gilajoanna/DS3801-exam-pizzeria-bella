@@ -1,3 +1,7 @@
 .navbar-button {
-    
+    color: #1D1F2C;
+}
+
+.navbar-button:hover {
+    color: #FF00FF;
 }
