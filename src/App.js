@@ -116,13 +116,12 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route exact path="/">
-            <Home />
-          </Route>
-            <PizzaList pizzaList={statePizza}/> 
-            <PastaList pastaList={statePasta}/>
-            <AddOnsList addOndList={stateAddOns}/>
-            <DrinkList drinkList={stateDrink}/>
+          <Route exact path="/" element={<Home/>}/>
+          <Route exact path="/" element={<PizzaList/>}/>
+          <Route exact path="/" element={<PastaList/>}/>
+          <Route exact path="/" element={<AddOnsList/>}/>
+          <Route exact path="/" element={<DrinkList/>}/>
+        
         </Routes>
       </BrowserRouter>
     </div>
