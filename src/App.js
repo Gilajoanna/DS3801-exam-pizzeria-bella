@@ -3,10 +3,11 @@ import { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 
-import Navbar from './components/MenuList';
+import Navbar from './components/Navbar';
 function App() {
 
-const pizza [state, setState] = useState (() => [
+  /*
+const pizza = [state, setState] = useState (() => [
     {name: "MARGHERITA", description: "Tomato sauce, mozzarella, basil, oregano", allergens:"WHEAT, MILK", price: 189 },
     {name: "PIZZA ALLA SALSICCIA", description: "Tomato sauce, mozzarella, Salsiccia piccante, olives, red onion, ruccula, parmesan", allergens:"WHEAT, MILK", price:229 },
     {name: "PIZZA POLLO", description: "Tomato sauce, mozzarella, chicken, red onion, garlic, olives, ruccula, pesto rosso, parmesan", allergens:"WHEAT, MILK, CASHEW NUTS", price: 229 },
@@ -58,8 +59,7 @@ const drinks [state, setState] = useState (() => [
   {name:"", description="", alargenes="", price= },
 ])
 
-
-
+*/
 
   return (
     <div className="App">
