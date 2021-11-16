@@ -23,7 +23,7 @@ const pasta [state, setState] = useState (() => [
     {name:"RISOTTO ALLA VENTRICINA", description="Risotto, ventricina salami, tomato, onion, garlic and parmesan", alargenes="MILK, SULFITES", price= 215 },
     {name:"RISOTTO AI FUNGHI PORCINI", description="Risotto, mushrooms, onions, garlic, white wine, parmesan", alargenes="MILK, SULFITES", price= 215 },
     {name:"SPAGHETTI CONN PICCANTE SALSICCIA", description="Fresh spaghetti with Salsiccia piccante, tomato sauce, fennel and parmesan", alargenes="WHEAT, DURUM WHEAT, MILK, CELERY", price= 229},
-    {name:"", description="", alargenes="", price= },
+    {name:"SPAGHETTI CON POLPETTE VEGETARIANE", description="Fresh spaghetti, tomato sauce, veggie buns, basil", alargenes="WHEAT, DURUM WHEAT", price= 199},
     {name:"", description="", alargenes="", price= },
     {name:"", description="", alargenes="", price= },
     {name:"", description="", alargenes="", price= },
