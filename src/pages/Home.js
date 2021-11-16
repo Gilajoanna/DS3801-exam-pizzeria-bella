@@ -6,6 +6,7 @@ function Home() {
     return(
         <Container maxWidth="md">
             <Navbar/>
+            <HeroImg img={ useThemeProps.img } />
         </Container>
     )
 }

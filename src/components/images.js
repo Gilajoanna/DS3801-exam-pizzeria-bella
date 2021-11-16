@@ -1,0 +1,3 @@
+const heroImg = [
+    "homeHero.png"
+];
