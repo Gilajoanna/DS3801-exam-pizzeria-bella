@@ -3,5 +3,5 @@
 }
 
 .navbar-button:hover {
-    color: #FF00FF;
+    text-decoration: underline;
 }

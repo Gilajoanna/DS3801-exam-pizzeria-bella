@@ -12,20 +12,30 @@ function Navbar() {
    
     return (
         <navbar>
-            <Toolbar sx={{ mb: 2, borderBottom: 1, borderColor: 'divider' }}>
+            <Toolbar sx={{ mt: 4, mb: 4 }}>
                 <Typography
-                    component="h2"
+                    component="h1"
                     variant="h3"
                     color="inherit"
                     noWrap
-                    sx={{ flex: 1 }}>
-                    Pizzeria Bella
+                    sx={{ flex: 1, letterSpacing: '6px', fontWeight: 700, color: "#0C4916" }}>
+                    PIZZERIA BELLA
                 </Typography>  
-                    <Button sx={{ justifyContent: 'flex-end' }} className='navbar-button' variant="text" size="medium">Order food</Button> 
-                    <Button sx={{ justifyContent: 'flex-end' }} className='navbar-button' variant="text" size="medium">Contact</Button>
-                    <Button sx={{ justifyContent: 'flex-end' }} className='navbar-button' variant="text" size="medium">About us</Button>
-                    <IconButton color="primary" aria-label="add to shopping cart">
-                        <AddShoppingCartIcon />
+                    <Button sx={{ justifyContent: 'flex-end', underline: 'hover', color: '#1D1F2C', letterSpacing: '4px', fontSize: 20 }} 
+                        className='navbar-button' variant="text" size="medium">ORDER FOOD
+                    </Button>
+
+                    <Button sx={{ justifyContent: 'flex-end', color: '#1D1F2C', letterSpacing: '4px', fontSize: 20 }} 
+                        className='navbar-button' variant="text" size="medium">CONTACT
+                    </Button>
+
+                    <Button sx={{ justifyContent: 'flex-end', color: '#1D1F2C', letterSpacing: '4px', fontSize: 20 }} 
+                        className='navbar-button' variant="text" size="medium">ABOUT US
+                    </Button>
+
+                    <IconButton 
+                        color="primary" aria-label="add to shopping cart">
+                        <AddShoppingCartIcon sx={{ justifyContent: 'flex-end', color: '#1D1F2C', letterSpacing: '4px', fontSize: 40 }} />
                     </IconButton>
             </Toolbar>
         </navbar>
