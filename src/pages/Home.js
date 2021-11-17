@@ -7,12 +7,14 @@ import OrderOnline from '../components/OrderOnline';
 
 function Home(props) {
     return(
-        <Container maxWidth="xl">
+        <main className="home">
+        
             <Navbar />
             <HeroImg img={ props.img } />
-            <OrderOnline />
-                       
-        </Container>
+            <OrderOnline />        
+            
+        </main>
+        
     )
 }
 
