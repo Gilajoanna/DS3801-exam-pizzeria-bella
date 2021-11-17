@@ -7,7 +7,7 @@ import images from './images/images';
 import PizzaList from './components/PizzaList';
 import PastaList from './components/PastaList';
 import SideDishesList from './components/SideDishesList';
-import DrinkList from './components/DrinkList';
+import BeveragesList from './components/BeveragesList';
 
 import './style2.css';
 
@@ -40,7 +40,7 @@ function App() {
         {name:"STROZZAPRETI CON POLLO", description:"Fresh strozzapreti, chicken fillet, bacon, peppers, spring onions, garlic, cream and basil", allergens:"WHEAT, DURUM WHEAT, EGGS, MILK, CELERY, SULPHITES", price: 229 }
     ])
 
-    const [stateAddOns, setStateAddOns] = useState (() => [
+    const [stateSideDishes, setStateSideDishes] = useState (() => [
       {name:"BRUSCHETTA CON AVOCADO E PROSCIUTTO DI PARMA", description:"Grilled country bread with avocado, parma ham, cherry tomato, red onion, garlic, pesto rosso and mozzarella", allergens:"WHEAT, RYE, MILK, PINE NUTS", price: 185 },
       {name:"BRUSCHETTA AL POMODORO E BASILICO", description:"Grilled country bread with cherry tomato, garlic, basil, olive oil and parmesan", allergens:"WHEAT, RYE, MILK", price: 155 },
       {name:"BRUSCHETTA CON FUNGHI PORCINI", description:"Grilled country bread with stone mushroom puree", allergens:"WHEAT, RYE, MILK, SOY", price: 185 },
@@ -54,7 +54,7 @@ function App() {
       {name:"AIOLI", description:"", allergens:"EGG", price: 30 }
     ])
 
-    const [stateDrink, setStateDrink] = useState (() => [
+    const [stateBeverage, setStateBeverage] = useState (() => [
       {name:"SAN PELLEGRINO", description:"Mineral water with carbon dioxide, 75 cl", price: 99 },
       {name:"GAZZOSA", description:"Italian lemon soda, 27.5 cl", price: 59 },
       {name:"ARANCIATA", description:"Italian orange soda, 27.5 cl", price: 59 },
@@ -84,14 +84,14 @@ function App() {
       })
     }
 
-    const addAddOnToCart = (name, description, allergens, price) => {
-      setStateAddOns(prevState => {
+    const addSideDishesToCart = (name, description, allergens, price) => {
+      setStateSideDishes(prevState => {
         return [...prevState, {name, description, allergens, price}]
       })
     }
 
-    const addDrinkToCart = (name, description, price) => {
-      setStateDrink(prevState => {
+    const addBeverageToCart = (name, description, price) => {
+      setStateBeverage(prevState => {
         return [...prevState, {name, description, price}]
       })
     }
@@ -107,12 +107,12 @@ function App() {
 
   
     useEffect(() => {
-      console.log(stateAddOns)
-    }, [stateAddOns])
+      console.log(stateSideDishes)
+    }, [stateSideDishes])
 
     useEffect(() => {
-      console.log(stateDrink)
-    }, [stateDrink])
+      console.log(stateBeverage)
+    }, [stateBeverage])
     
 
   return (
@@ -123,7 +123,7 @@ function App() {
           <Route exact path="/" element={<PizzaList/>}/>
           <Route exact path="/" element={<PastaList/>}/>
           <Route exact path="/" element={<SideDishesList/>}/>
-          <Route exact path="/" element={<DrinkList/>}/>
+          <Route exact path="/" element={<BeveragesList/>}/>
         
         </Routes>
       </BrowserRouter>

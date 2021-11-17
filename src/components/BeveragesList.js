@@ -1,9 +1,9 @@
 import { Container, Fab, Grid } from '@mui/material';
 import { useHistory } from 'react-router';
 
-import DrinkCard from './DrinkCard';
+import BeveragesCard from './BeveragesCard';
 
-export default function DrinkList({ drinkList, addDrinkToCart }) {
+export default function BeveragesList({ beveragesList, addBeveragesToCart }) {
     /*
     let history = useHistory();
 
@@ -15,8 +15,8 @@ export default function DrinkList({ drinkList, addDrinkToCart }) {
     return (
         <Container maxWidth="md"> 
             <Grid container spacing={3}>
-                {drinkList.map((drink, index) => {
-                    return <Grid item xs={12} lg={6} key={index}><DrinkCard drink={drink}/></Grid>
+                {beveragesList.map((beverage, index) => {
+                    return <Grid item xs={12} lg={6} key={index}><BeveragesCard beverage={beverage}/></Grid>
                 })}
             </Grid>
         </Container>

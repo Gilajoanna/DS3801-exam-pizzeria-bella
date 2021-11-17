@@ -5,18 +5,18 @@ import Button from '@mui/material/Button';
 import React from 'react';
 
 
-function DrinkCard({ drink, addDrinkToCart }){
+function BeveragesCard({ beverage, addBeverageToCart }){
 
     return (
         <Card elevation={3}>
             <CardHeader/>
                 <CardContent>
                     <Typography sx={{ fontsize: 16}} color="text.secondary" gutterBottom> 
-                        <p>{drink.name}</p>
+                        <p>{beverage.name}</p>
                     </Typography>
                     <Typography sx={{fontsize: 14}} color="text.secondary" gutterBottom>
-                        <p>{drink.description}</p>
-                        <p>{drink.price}</p>
+                        <p>{beverage.description}</p>
+                        <p>{beverage.price}</p>
                     </Typography>
                     <Button sx={{ justifyContent: 'flex-end', color: '#1D1F2C', letterSpacing: '4px', fontSize: 20 }} 
                         className='navbar-button' variant="text" size="medium">ADD
@@ -27,4 +27,4 @@ function DrinkCard({ drink, addDrinkToCart }){
     )
 }
 
-export default DrinkCard;
+export default BeveragesCard;

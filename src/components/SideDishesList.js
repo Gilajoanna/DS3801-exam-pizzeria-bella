@@ -16,8 +16,8 @@ export default function SideDishesList({addAddOnsList: addSideDishesList, addSid
     return (
         <Container maxWidth="md"> 
             <Grid container spacing={3}>
-                {addSideDishesList.map((addOns, index) => {
-                    return <Grid item xs={12} lg={6} key={index}><SideDishesCard addOns={addOns}/></Grid>
+                {addSideDishesList.map((sideDish, index) => {
+                    return <Grid item xs={12} lg={6} key={index}><SideDishesCard sideDish={sideDish}/></Grid>
                 })}
             </Grid>
         </Container>
