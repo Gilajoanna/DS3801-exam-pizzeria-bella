@@ -3,7 +3,9 @@
     overflow-x: hidden;
     overflow-y: hidden;
     background-color: #F8F6F2;
+    position: absolute;
 }
+
 
 .orderOnline-header {
     margin-top: 10px;  
@@ -13,7 +15,6 @@
     width: 18em;
     border: solid;
     border-color: #1D1F2C;
-    position: absolute;
 }
 
 .home {
