@@ -2,16 +2,18 @@ import { Toolbar, Typography, IconButton } from "@mui/material";
 import Button from '@mui/material/Button';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { Link } from 'react-router-dom';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import React from "react";
+import '../style.css';
 
 function Navbar() {
    
     return (
-        <navbar>
+        <nav className="nav-bar">
             <Toolbar sx={{ mt: 4, mb: 4 }}>
                 <Typography
                     component="h1"
@@ -38,7 +40,7 @@ function Navbar() {
                         <AddShoppingCartIcon sx={{ justifyContent: 'flex-end', color: '#1D1F2C', letterSpacing: '4px', fontSize: 40 }} />
                     </IconButton>
             </Toolbar>
-        </navbar>
+        </nav>
     )
 }
 
