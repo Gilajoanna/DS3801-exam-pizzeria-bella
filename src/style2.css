@@ -9,10 +9,13 @@
 
 .orderOnline-header {
     margin-top: 10px;  
+    font: Roboto;
+    font-weight: 500;
 }
 
 .orderOnline-button {
-    width: 18em;
+    width: 24em;
+    height: 3.5em;
     border: solid;
     border-color: #1D1F2C;
 }

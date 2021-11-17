@@ -2,9 +2,9 @@
 import { Container, Fab, Grid } from '@mui/material';
 import { useHistory } from 'react-router';
 
-import AddOnsCard from './AddOnsCard';
+import SideDishesCard from './SideDishesCard';
 
-export default function AddOnsList({addAddOnsList, addPastaToCart}) {
+export default function SideDishesList({addAddOnsList: addSideDishesList, addSideDishesToCart}) {
     /*
     let history = useHistory();
 
@@ -16,8 +16,8 @@ export default function AddOnsList({addAddOnsList, addPastaToCart}) {
     return (
         <Container maxWidth="md"> 
             <Grid container spacing={3}>
-                {addAddOnsList.map((addOns, index) => {
-                    return <Grid item xs={12} lg={6} key={index}><AddOnsCard addOns={addOns}/></Grid>
+                {addSideDishesList.map((addOns, index) => {
+                    return <Grid item xs={12} lg={6} key={index}><SideDishesCard addOns={addOns}/></Grid>
                 })}
             </Grid>
         </Container>

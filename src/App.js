@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import images from './images/images';
 import PizzaList from './components/PizzaList';
 import PastaList from './components/PastaList';
-import AddOnsList from './components/AddOnsList';
+import SideDishesList from './components/SideDishesList';
 import DrinkList from './components/DrinkList';
 
 import './style2.css';
@@ -122,7 +122,7 @@ function App() {
           <Route exact path="/" element={<Home img={ images[0] }/>}/>
           <Route exact path="/" element={<PizzaList/>}/>
           <Route exact path="/" element={<PastaList/>}/>
-          <Route exact path="/" element={<AddOnsList/>}/>
+          <Route exact path="/" element={<SideDishesList/>}/>
           <Route exact path="/" element={<DrinkList/>}/>
         
         </Routes>
