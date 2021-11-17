@@ -9,12 +9,13 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import React from "react";
 import '../style.css';
+import '../style2.css';
 
 function Navbar() {
    
     return (
         <nav className="nav-bar">
-            <Toolbar sx={{ mt: 4, mb: 4 }}>
+            <Toolbar sx={{ mt: 4, mb: 4, justifyContent: 'center' }}>
                 <Typography
                     component="h1"
                     variant="h3"

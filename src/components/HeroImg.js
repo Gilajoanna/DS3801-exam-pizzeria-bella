@@ -1,10 +1,14 @@
 import { Container, Grid } from '@mui/material';
 import React from 'react';
+import '../style.css';
+import '../style2.css';
+
 
 function HeroImg(props) {
     return(
-        <img className="home-image" src={ props.img } alt='home_image' />
-
+        <section className='image-container'>
+            <img className='hero-image' src={ props.img } alt='hero_image' />
+        </section>
     )
 }
 

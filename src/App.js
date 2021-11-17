@@ -9,6 +9,8 @@ import PastaList from './components/PastaList';
 import AddOnsList from './components/AddOnsList';
 import DrinkList from './components/DrinkList';
 
+import './style2.css';
+
 
 function App() {
 

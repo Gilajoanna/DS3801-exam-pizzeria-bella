@@ -1,19 +1,17 @@
-.nav-bar {
-    background-color: cadetblue;
-}
 
-@media all and (min-width: 600px) {
+
+@media screen and (max-width: 600px) {
     .nav-bar {
         background-color: pink;
     }
 }
 
+.image-container {
+    margin: 0;
+}
 
-.home-image {
-    width: 100px;
+.hero-image {
     height: 100px;
-    position: relative;
-    overflow: hidden;
 }
 
 
