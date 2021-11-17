@@ -3,9 +3,11 @@ import React from 'react';
 
 function HeroImg(props) {
     return(
-        <Container>
-            <img sx={{ flex: 1 }} className="home-image" src={ props.img } alt='hero_img' />
-        </Container>
+        <section className='image-section'>
+            <Container>
+                <img sx={{ flex: 1 }} className="home-image" src={ props.img } alt='home_image' />
+            </Container>
+        </section>
     )
 }
 
