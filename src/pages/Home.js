@@ -3,14 +3,14 @@ import React from 'react';
 
 import Navbar from '../components/Navbar';
 import HeroImg from '../components/HeroImg';
-import OrderFood from '../components/OrderFood';
+import OrderOnline from '../components/OrderOnline';
 
 function Home(props) {
     return(
         <Container maxWidth="xl">
             <Navbar />
             <HeroImg img={ props.img } />
-            <OrderFood />
+            <OrderOnline />
                        
         </Container>
     )
