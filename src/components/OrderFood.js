@@ -10,7 +10,7 @@ export default function OrderFood(){
         
         <Container maxWidth="md" className="orderFodd-container">
     
-            <Typography sx={{ justifyContent: 'center'}}>
+            <Typography sx={{ justifyContent: 'center', borderColor: '#1D1F2C'}}>
                 <h1>ORDER FOOD</h1>
             </Typography>
             <Button sx={{ justifyContent: 'center', color: '#1D1F2C', letterSpacing: '4px', fontSize: 22 }} 
