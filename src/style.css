@@ -15,7 +15,40 @@
 .hero-image {
     height: 700px;
     width: 1500px;
+    /*
     object-fit: cover;
+    */
 }
 
+.mobile-nav-bar {
+    display: none;
+}
 
+@media (max-width: 700px) {
+    .nav-bar {
+        display: none;
+    }
+
+    .mobile-nav-bar {
+        display: flex;
+        align-items: center;
+
+    }
+
+    .nav-burger {
+        cursor: pointer;
+    }
+
+    .nav-bar-list {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: column;
+
+    }
+
+    .nav-list-item {
+        display: flex;
+        flex-direction: column;
+    }
+}
