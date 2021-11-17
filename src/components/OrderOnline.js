@@ -11,7 +11,7 @@ export default function OrderOnline(){
 
     return(
         <main className="orderOnline-container">
-            <Typography sx={{ justifyContent: 'center', textAlign: 'center', margin: '2em', letterSpacing: '4px' }}>
+            <Typography sx={{ justifyContent: 'center', textAlign: 'center', margin: '2em', letterSpacing: '4px', fontSize: '42px' }}>
                 <h1 className="orderOnline-header">ORDER ONLINE</h1>
             </Typography>
     

@@ -13,6 +13,7 @@
     width: 18em;
     border: solid;
     border-color: #1D1F2C;
+    position: absolute;
 }
 
 .home {
