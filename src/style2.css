@@ -1,16 +1,30 @@
 
 .orderOnline-container {
-    width: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
     background-color: #F8F6F2;
-    padding: 0%;
-    margin: 0%;
 }
 
 .orderOnline-header {
-  
-  
+    margin-top: 10px;  
 }
 
 .orderOnline-button {
     width: 18em;
+    border: solid;
+    border-color: #1D1F2C;
+}
+
+.home {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.app {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+body{
+    margin: 0;
 }
