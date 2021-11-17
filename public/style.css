@@ -1,6 +1,12 @@
+.image-section {
+    overflow: hidden;
+    position: absolute;
+}
+
 .home-image {
     width: 1px;
     height: 1px;
+    position: relative;
     overflow: hidden;
 }
 
