@@ -10,7 +10,8 @@ function Home(props) {
         <Container maxWidth="xl">
             <Navbar />
             <HeroImg img={ props.img } />
-            <OrderFood/>
+            <OrderFood />
+                       
         </Container>
     )
 }

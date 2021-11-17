@@ -3,10 +3,13 @@ import { Typography } from '@mui/material';
 import Button from '@mui/material/Button';
 
 
+
 export default function OrderFood(){
 
     return(
+        
         <Container maxWidth="md" className="orderFodd-container">
+    
             <Typography sx={{ justifyContent: 'center'}}>
                 <h1>ORDER FOOD</h1>
             </Typography>
