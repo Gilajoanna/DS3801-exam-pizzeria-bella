@@ -10,6 +10,9 @@ import SideDishesList from './components/SideDishesList';
 import BeveragesList from './components/BeveragesList';
 
 import './style2.css';
+import PastaCard from "./components/PastaCard";
+import Navbar from "./components/navbar/Navbar";
+import { render } from "@testing-library/react";
 
 
 function App() {
@@ -115,21 +118,23 @@ function App() {
     }, [stateBeverage])
     
 
-  return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route exact path="/" element={<Home img={ images[0] }/>}/>
-          <Route exact path="/" element={<PizzaList/>}/>
-          <Route exact path="/" element={<PastaList/>}/>
-          <Route exact path="/" element={<SideDishesList/>}/>
-          <Route exact path="/" element={<BeveragesList/>}/>
-        
-        </Routes>
-      </BrowserRouter>
-    </div>
-    
-  );
+    return (
+      <div className="App">
+        <BrowserRouter>
+            <Routes>
+              <Route exact path="/" element={<Home img={ images[0] }/>}/>
+              <Route path= "/pizzaList" >
+                <PizzaList pizzaList={statePizza}/>
+              </Route>
+              <Route path= "/pastaList" component={<PastaList/>} /> 
+              <Route path="/SideDishesList" component={<SideDishesList/>}/>
+              <Route path="/BeveragesList" component={<BeveragesList/>}/>
+            </Routes>
+        </BrowserRouter>
+      </div>
+      
+    );
 }
+
 
 export default App;

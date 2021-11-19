@@ -12,6 +12,7 @@ export default function PastaList({pastaList, addPastaToCart}) {
     }
     */
 
+    
     return (
         <Container maxWidth="md"> 
             <Grid container spacing={3}>
@@ -20,5 +21,6 @@ export default function PastaList({pastaList, addPastaToCart}) {
                 })}
             </Grid>
         </Container>
-    )
+    );
+
 }

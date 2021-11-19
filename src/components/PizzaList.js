@@ -5,6 +5,7 @@ import { render } from '@testing-library/react';
 import { useHistory } from 'react-router';
 
 import PizzaCard from './PizzaCard';
+import Navbar from './navbar/Navbar';
 
 export default function PizzaList({pizzaList, addPizzaToCart}) {
     /*
@@ -15,37 +16,42 @@ export default function PizzaList({pizzaList, addPizzaToCart}) {
     }
     */
 
-    render()
-        return (
-            <main>
-                <Typography>
-                    component="h1"
-                    variant="h3"
-                </Typography>
-
-                <Button sx={{ justifyContent: 'flex-end', color: '#1D1F2C', letterSpacing: '4px', fontSize: 20 }} 
-                className='pizzaGoToPsta' variant="contained" size="medium">PASTA
-                </Button>
-
-                <Button sx={{ justifyContent: 'flex-end', color: '#1D1F2C', letterSpacing: '4px', fontSize: 20 }} 
-                className='pizzaGoToSideDishes' variant="contained" size="medium">SIDE DISHES
-                </Button>
-
-                <Button sx={{ justifyContent: 'flex-end', color: '#1D1F2C', letterSpacing: '4px', fontSize: 20 }} 
-                className='pizzaGoToDrinks' variant="contained" size="medium">DRINKS
-                </Button>
-
-                <Container maxWidth="md"> 
-                    <Grid container spacing={3}>
-                        {pizzaList.map((pizza, index) => {
-                            return <Grid item xs={12} lg={6} key={index}><PizzaCard pizza={pizza}/></Grid>
-                        })}
-                    </Grid>
+   
+    return (
+        
+        <main className = "pizzaMeny">
+            <Container>
+            <header>
+                <Container>
+                    <Navbar/>
                 </Container>
+            </header>
+            <Typography>
+                component="h1"
+                variant="h3"
+            </Typography>
 
+            <Button sx={{ justifyContent: 'flex-end', color: '#1D1F2C', letterSpacing: '4px', fontSize: 20 }} 
+            className='pizzaGoToPsta' variant="contained" size="medium">PASTA
+            </Button>
 
-            </main>
-            
-        );
+            <Button sx={{ justifyContent: 'flex-end', color: '#1D1F2C', letterSpacing: '4px', fontSize: 20 }} 
+            className='pizzaGoToSideDishes' variant="contained" size="medium">SIDE DISHES
+            </Button>
+
+            <Button sx={{ justifyContent: 'flex-end', color: '#1D1F2C', letterSpacing: '4px', fontSize: 20 }} 
+            className='pizzaGoToDrinks' variant="contained" size="medium">DRINKS
+            </Button>
+
+            <Container maxWidth="md"> 
+                <Grid container spacing={3}>
+                    {pizzaList.map((pizza, index) => {
+                        <><Grid item xs={12} lg={6} key={index}><PizzaCard pizza={pizza} /></Grid></>
+                    })}
+                </Grid>
+            </Container>
+            </Container>
+        </main>  
+    );
     
 }

@@ -8,20 +8,23 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import '../style2.css';
 
+import PastaList from './PastaList';
 
 
 
-export default function OrderOnline(PizzaList, pasta, sideDishes, beverages){
+
+export default function OrderOnline(){
 
     return(
         <main className="orderOnline-container">
+            <Container>
             <Typography sx={{ justifyContent: 'center', textAlign: 'center', margin: '2em', letterSpacing: '8px', fontSize: '48px' }}>
                 <h1 className="orderOnline-header">ORDER ONLINE</h1>
             </Typography>
     
             <Box sx={{ flexDirection: 'column', justifyContent: 'center', textAlign: 'center', margin: '2em' }} item xs={6}>
                 <Button 
-                    component= {Link} to={'/PizzaCard'}
+                    component= {Link} to='/pizzaList'
                     style={{ backgroundColor: '#FFFFFF', color: '#1D1F2C', letterSpacing: '4px', fontSize: 28, borderColor: '#1D1F2C'}} 
                     className='orderOnline-button' variant="outlined"  size="large">PIZZA  
                 </Button>
@@ -30,7 +33,7 @@ export default function OrderOnline(PizzaList, pasta, sideDishes, beverages){
 
             <Box sx={{ flexDirection: 'column', justifyContent: 'center', textAlign: 'center', margin: '2em' }} item xs={6}>
                 <Button 
-                    component= {Link} to={'/PastaCard'} 
+                    component= {Link} to={'/pastaList'}
                     style={{ backgroundColor: '#FFFFFF', color: '#1D1F2C', letterSpacing: '4px', fontSize: 28, borderColor: '#1D1F2C' }} 
                     className='orderOnline-button' variant="outlined" size="large">PASTA
                 </Button>
@@ -39,7 +42,7 @@ export default function OrderOnline(PizzaList, pasta, sideDishes, beverages){
 
             <Box sx={{ flexDirection: 'column', justifyContent: 'center', textAlign: 'center', margin: '2em' }} item xs={6}>
                 <Button 
-                    component= {Link} to={'/SideDishesCard'} 
+                    component= {Link} to={'/SideDishesList'} 
                     style={{  backgroundColor: '#FFFFFF', color: '#1D1F2C', letterSpacing: '4px', fontSize: 28, borderColor: '#1D1F2C' }} 
                     className='orderOnline-button' variant="outlined" size="large">SIDE DISHES
                 </Button>
@@ -48,11 +51,12 @@ export default function OrderOnline(PizzaList, pasta, sideDishes, beverages){
 
             <Box sx={{ flexDirection: 'column', justifyContent: 'center', textAlign: 'center', margin: '2em' }} item xs={6}>
                 <Button 
-                    component= {Link} to={'/BeveragesCard'} 
+                    component= {Link} to={'/BeveragesList'} 
                     style={{ backgroundColor: '#FFFFFF', color: '#1D1F2C', letterSpacing: '4px', fontSize: 28, borderColor: '#1D1F2C' }} 
                     className='orderOnline-button' variant="outlined" size="large">BEVERAGES
                 </Button>
             </Box>
+            </Container>
        
         </main>
     )
