@@ -9,22 +9,32 @@
 
 .image-container {
     margin: 0;
-    position: relative;
+
 }
 
 .hero-image {
     height: 700px;
     width: 1500px;
-    /*
     object-fit: cover;
-    */
 }
 
 .mobile-nav-bar {
     display: none;
 }
 
-@media (max-width: 700px) {
+.nav-header {
+    position: relative;
+}
+
+.nav-bar-container{
+    padding: 0;
+}
+
+.nav-bar {
+    padding: 0;
+}
+
+@media (max-width: 1010px) {
     .nav-bar {
         display: none;
     }
@@ -32,23 +42,27 @@
     .mobile-nav-bar {
         display: flex;
         align-items: center;
-
     }
 
     .nav-burger {
+        position: absolute;
+        right: 5%;
         cursor: pointer;
     }
 
-    .nav-bar-list {
+    .nav-bar-container{
+        position: relative;
         display: flex;
         flex-direction: column;
-        position: relative;
-        justify-content: column;
-
+        top: 300px;
+        right: 0;
     }
 
-    .nav-list-item {
-        display: flex;
-        flex-direction: column;
+    .navbar-button {
+        color: white;
+    }
+
+    .shopping-cart {
+        top: 200px;
     }
 }
