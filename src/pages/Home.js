@@ -13,12 +13,12 @@ import PastaList from '../components/PastaList';
 
 function Home(props) {
     return(
-        <main className="home">
+       <div className='container'>
             <Navbar />
             <HeroImg img={ props.img } />
             <OrderOnline/>
-            <PizzaList/>
-        </main>        
+            <PizzaList/>    
+       </div>  
     );
 }
 

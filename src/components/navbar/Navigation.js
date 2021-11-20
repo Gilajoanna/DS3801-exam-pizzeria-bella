@@ -1,5 +1,5 @@
-import { Typography } from "@mui/material";
-import { Grid, Container } from "@mui/material";
+import { ThemeProvider, Typography } from "@mui/material";
+import { Grid, Container, createTheme } from "@mui/material";
 
 import NavBarLinks from './NavBarLinks';
 
@@ -7,17 +7,31 @@ import '../../style.css';
 import '../../style2.css';
 
 function Navigation () {
+
+    const theme = createTheme();
+        theme.typography.h3 = {
+            fontSize: '1.2rem',
+            '@media (min-width: 576px)': {
+                fontSize: '1.5rem',
+            },
+            [theme.breakpoints.up('md')]: {
+                fontSize: '2.4rem'
+            },
+    };
+
     return(
         <nav className='nav-bar'>
             <Grid container>
+                <ThemeProvider theme={theme}>
                 <Typography className="nav-header"
-                            component="h1"
-                            variant="h3"
-                            noWrap
-                            sx={{ flex: 1, mb: 4, mt: 5, ml: 4, letterSpacing: '6px', fontWeight: 700, color: "#0C4916" }}>
-                            PIZZERIA BELLA
-                        </Typography>
-                        <NavBarLinks />
+                    component="h1"
+                    variant="h3"
+                    noWrap
+                    sx={{ flex: 1, mb: 4, mt: 5, ml: 4, letterSpacing: '6px', fontWeight: 700, color: "#0C4916" }}>
+                    PIZZERIA BELLA
+                </Typography>
+                </ThemeProvider>
+                <NavBarLinks />
             </Grid>    
         </nav>
     );

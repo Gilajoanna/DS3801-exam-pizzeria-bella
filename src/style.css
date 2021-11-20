@@ -1,36 +1,33 @@
-
-/*
-@media screen and (max-width: 600px) {
-    .nav-bar {
-        background-color: pink;
-    }
+.container {
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
-*/
 
 .image-container {
     margin: 0;
 }
 
 .hero-image {
-    height: 700px;
-    width: 1500px;
+    height: auto;
+    width: 100%;
     object-fit: cover;
+}
+
+.nav-header {
+    height: auto;
+    width: 100%;
+    position: relative;
 }
 
 .mobile-nav-bar {
     display: none;
 }
 
-.nav-header {
+.nav-container {
     position: relative;
-}
-
-.nav-bar-container{
-    padding: 0;
-}
-
-.nav-bar {
-    padding: 0;
+    display: flex;
 }
 
 @media (max-width: 1010px) {
@@ -40,28 +37,20 @@
 
     .mobile-nav-bar {
         display: flex;
-        align-items: center;
+        position: relative;
+        right: 0;
     }
 
     .nav-burger {
-        position: absolute;
+        position: relative;
         right: 5%;
         cursor: pointer;
     }
 
-    .nav-bar-container{
+    .nav-content-container{
         position: relative;
-        display: flex;
         flex-direction: column;
-        top: 300px;
-        right: 0;
-    }
-
-    .navbar-button {
-        color: white;
-    }
-
-    .shopping-cart {
         top: 200px;
+        right: 0;
     }
 }

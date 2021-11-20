@@ -14,7 +14,7 @@ import '../../style2.css';
 
 function NavBarLinks() {
     return(
-            <Toolbar className="nav-bar-container" sx={{ mt: 5, mb: 4 , justifyContent: 'right'}}>
+            <Toolbar className="nav-content-container" sx={{ mt: 5, mb: 4 , justifyContent: 'right'}}>
                 <Button sx={{ justifyContent: 'flex-end', underline: 'hover', color: '#1D1F2C', letterSpacing: '4px', fontSize: 20 }} 
                         className='navbar-button' variant="text" size="medium">ORDER FOOD
                 </Button>
@@ -27,8 +27,8 @@ function NavBarLinks() {
                         className='navbar-button' variant="text" size='medium'>ABOUT US
                 </Button>
 
-                <IconButton  component={ Link } to='/checkOut' color='primary' aria-label='add to shopping cart'>
-                     <AddShoppingCartIcon className='shopping-cart' sx={{ justifyContent: 'flex-end', color: '#1D1F2C', letterSpacing: '4px', fontSize: 40 }} />
+                <IconButton component={ Link } to='/checkOut' color='primary' aria-label='shopping cart'>
+                     <AddShoppingCartIcon className='shopping-cart' sx={{ justifyContent: 'flex-end', color: '#1D1F2C', letterSpacing: '4px', fontSize: 45 }} />
                 </IconButton>
             </Toolbar>
     );
