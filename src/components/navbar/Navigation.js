@@ -1,5 +1,6 @@
 import { ThemeProvider, Typography } from "@mui/material";
-import { Grid, Container, createTheme } from "@mui/material";
+import { Grid, createTheme } from "@mui/material";
+import { Link } from 'react-router-dom'
 
 import NavBarLinks from './NavBarLinks';
 
@@ -28,7 +29,7 @@ function Navigation () {
                     variant="h3"
                     noWrap
                     sx={{ flex: 1, mb: 4, mt: 5, ml: 4, letterSpacing: '6px', fontWeight: 700, color: "#0C4916" }}>
-                    PIZZERIA BELLA
+                    <Link style={{ textDecoration: 'none', color: 'inherit' }} to="/">PIZZERIA BELLA</Link>
                 </Typography>
                 </ThemeProvider>
                 <NavBarLinks />

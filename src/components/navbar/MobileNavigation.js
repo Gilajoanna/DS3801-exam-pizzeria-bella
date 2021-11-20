@@ -3,6 +3,7 @@ import { ThemeProvider, createTheme } from "@mui/material";
 import NavBarLinks from './NavBarLinks';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Typography, Grid } from "@mui/material";
+import { Link } from 'react-router-dom'
 
 import '../../style.css';
 import '../../style2.css';
@@ -31,7 +32,7 @@ function MobileNavigation() {
                     variant="h3"
                     noWrap
                     sx={{ flex: 1, mb: 4, mt: 5, ml: 4, letterSpacing: '6px', fontWeight: 700, color: "#0C4916" }}>
-                    PIZZERIA BELLA
+                    <Link style={{ textDecoration: 'none', color: 'inherit' }} to="/">PIZZERIA BELLA</Link>
                 </Typography>
                 </ThemeProvider>
                 <MenuIcon className='nav-burger' sx={{ justifyContent: 'flex-end', color: '#1D1F2C', letterSpacing: '4px', fontSize: 40 }} 
