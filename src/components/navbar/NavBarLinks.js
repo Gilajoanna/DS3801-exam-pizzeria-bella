@@ -2,7 +2,6 @@ import { Toolbar, Typography, IconButton, Grid } from "@mui/material";
 import Button from '@mui/material/Button';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { Link } from 'react-router-dom';
-import useMediaQuery from '@mui/material/useMediaQuery';
 
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';

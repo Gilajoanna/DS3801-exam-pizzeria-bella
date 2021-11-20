@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
 import images from './images/images';
-import PizzaList from "./components/products/PizzaList";
+// import PizzaList from "./components/products/PizzaList";
 import CheckOut from './components/checkout/CheckOut';
 import './style2.css';
 
@@ -127,7 +127,6 @@ function App() {
         <BrowserRouter>
             <Routes>
               <Route exact path="/" element={ <Home img={ images[0] } /> } />
-                <Route path= "/pizzaList" element={ <PizzaList /> } />
                 <Route path= "/checkOut" element={ <CheckOut /> } />
             </Routes>
         </BrowserRouter>
