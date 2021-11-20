@@ -4,22 +4,14 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
 import images from './images/images';
-import PizzaList from './components/PizzaList';
+import PizzaList from "./components/products/PizzaList";
 import CheckOut from './components/checkout/CheckOut';
-import PastaList from './components/PastaList';
-import SideDishesList from './components/SideDishesList';
-import BeveragesList from './components/BeveragesList';
-
 import './style2.css';
-import PastaCard from "./components/PastaCard";
-import Navbar from "./components/navbar/Navbar";
-import { render } from "@testing-library/react";
-import { KeyboardReturnRounded } from "@mui/icons-material";
+
+
 
 
 function App() {
-
-
     const [statePizza, setStatePizza] = useState (() => [
       { name: "MARGHERITA", description: "Tomato sauce, mozzarella, basil, oregano", allergens:"WHEAT, MILK", price: 189 },
       { name: "PIZZA ALLA SALSICCIA", description: "Tomato sauce, mozzarella, Salsiccia piccante, olives, red onion, ruccula, parmesan", allergens:"WHEAT, MILK", price:229 },
@@ -32,6 +24,7 @@ function App() {
       { name: "CALABRESE", description: "Tomato sauce, mozzarella, Marchisio salami with black truffle, truffle oil, ruccula", allergens:"WHEAT, MILK, SULPHITES", price: 229 },
       { name: "INFERNO", description: "Tomato sauce, mozzarella, Negrini salami spicy pepperoni, marinated chili pepper", allergens:"WHEAT, MILK", price: 229 }
   ])
+
 
     const [statePasta, setStatePasta] = useState (() => [
         { name:"RISOTTO ALLA VENTRICINA", description:"Risotto, ventricina salami, tomato, onion, garlic and parmesan", allergens:"MILK, SULPHITES", price: 215 },
@@ -59,7 +52,7 @@ function App() {
       { name:"GARLIC DRESSING", description:"", allergens:"MILK", price: 30 },
       { name:"AIOLI", description:"", allergens:"EGG", price: 30 }
     ])
-
+    
     const [stateBeverage, setStateBeverage] = useState (() => [
       {name:"SAN PELLEGRINO", description:"Mineral water with carbon dioxide, 75 cl", price: 99 },
       {name:"GAZZOSA", description:"Italian lemon soda, 27.5 cl", price: 59 },
@@ -83,6 +76,7 @@ function App() {
         return [...prevState, {name, description, allergens, price}]
       })
     }
+ 
 
     const addPastaToCart = (name, description, allergens, price) => {
       setStatePasta(prevState => {
@@ -102,15 +96,17 @@ function App() {
       })
     }
 
+  
     const Pizza = () => {
       const [ statePizza, setStatePizza ] = useState
       return <Pizza changeState={setStatePizza}/>
-
     }
+
+
     useEffect(() => {
       console.log(statePizza)
     }, [statePizza])
-    
+   
     
     useEffect(() => {
       console.log(statePasta)
@@ -131,7 +127,7 @@ function App() {
         <BrowserRouter>
             <Routes>
               <Route exact path="/" element={ <Home img={ images[0] } /> } />
-                <Route path= "/pizzaList" element={ <PizzaList/> } />
+                <Route path= "/pizzaList" element={ <PizzaList /> } />
                 <Route path= "/checkOut" element={ <CheckOut /> } />
             </Routes>
         </BrowserRouter>
