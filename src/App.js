@@ -13,22 +13,24 @@ import './style2.css';
 import PastaCard from "./components/PastaCard";
 import Navbar from "./components/navbar/Navbar";
 import { render } from "@testing-library/react";
+import { KeyboardReturnRounded } from "@mui/icons-material";
 
 
 function App() {
 
+
     const [statePizza, setStatePizza] = useState (() => [
-        { name: "MARGHERITA", description: "Tomato sauce, mozzarella, basil, oregano", allergens:"WHEAT, MILK", price: 189 },
-        { name: "PIZZA ALLA SALSICCIA", description: "Tomato sauce, mozzarella, Salsiccia piccante, olives, red onion, ruccula, parmesan", allergens:"WHEAT, MILK", price:229 },
-        { name: "PIZZA POLLO", description: "Tomato sauce, mozzarella, chicken, red onion, garlic, olives, ruccula, pesto rosso, parmesan", allergens:"WHEAT, MILK, CASHEW NUTS", price: 229 },
-        { name: "PIZZA CON GAMBERI", description: "Tomato sauce, mozzarella, chili and garlic marinated scampi, red onion, parsley, lime", allergens:"WHEAT, SHELLFISH, MILK", price: 229 },
-        { name: "PROSCIUTTO E FUNGHI", description: "Tomato sauce, mozzarella, ham, mushrooms", allergens:"WHEAT, MILK", price: 199 },
-        { name: "PIZZA SALAME", description: "Tomato sauce, mozzarella, pepperoni Calabra, red onion, cherry tomato", allergens:"WHEAT, MILK", price: 229},
-        { name: "PARMA", description: "Tomato sauce, mozzarella, parma ham, ruccula, parmesan", allergens:"WHEAT, MILK", price: 229 },
-        { name: "PIZZA PANCHETTA", description: "Tomato sauce, mozzarella, pancetta, red onion, parmesan, oregano", allergens:"WHEAT, MILK", price: 229 },
-        { name: "CALABRESE", description: "Tomato sauce, mozzarella, Marchisio salami with black truffle, truffle oil, ruccula", allergens:"WHEAT, MILK, SULPHITES", price: 229 },
-        { name: "INFERNO", description: "Tomato sauce, mozzarella, Negrini salami spicy pepperoni, marinated chili pepper", allergens:"WHEAT, MILK", price: 229 }
-    ])
+      { name: "MARGHERITA", description: "Tomato sauce, mozzarella, basil, oregano", allergens:"WHEAT, MILK", price: 189 },
+      { name: "PIZZA ALLA SALSICCIA", description: "Tomato sauce, mozzarella, Salsiccia piccante, olives, red onion, ruccula, parmesan", allergens:"WHEAT, MILK", price:229 },
+      { name: "PIZZA POLLO", description: "Tomato sauce, mozzarella, chicken, red onion, garlic, olives, ruccula, pesto rosso, parmesan", allergens:"WHEAT, MILK, CASHEW NUTS", price: 229 },
+      { name: "PIZZA CON GAMBERI", description: "Tomato sauce, mozzarella, chili and garlic marinated scampi, red onion, parsley, lime", allergens:"WHEAT, SHELLFISH, MILK", price: 229 },
+      { name: "PROSCIUTTO E FUNGHI", description: "Tomato sauce, mozzarella, ham, mushrooms", allergens:"WHEAT, MILK", price: 199 },
+      { name: "PIZZA SALAME", description: "Tomato sauce, mozzarella, pepperoni Calabra, red onion, cherry tomato", allergens:"WHEAT, MILK", price: 229},
+      { name: "PARMA", description: "Tomato sauce, mozzarella, parma ham, ruccula, parmesan", allergens:"WHEAT, MILK", price: 229 },
+      { name: "PIZZA PANCHETTA", description: "Tomato sauce, mozzarella, pancetta, red onion, parmesan, oregano", allergens:"WHEAT, MILK", price: 229 },
+      { name: "CALABRESE", description: "Tomato sauce, mozzarella, Marchisio salami with black truffle, truffle oil, ruccula", allergens:"WHEAT, MILK, SULPHITES", price: 229 },
+      { name: "INFERNO", description: "Tomato sauce, mozzarella, Negrini salami spicy pepperoni, marinated chili pepper", allergens:"WHEAT, MILK", price: 229 }
+  ])
 
     const [statePasta, setStatePasta] = useState (() => [
         { name:"RISOTTO ALLA VENTRICINA", description:"Risotto, ventricina salami, tomato, onion, garlic and parmesan", allergens:"MILK, SULPHITES", price: 215 },
@@ -99,6 +101,11 @@ function App() {
       })
     }
 
+    const Pizza = () => {
+      const [ statePizza, setStatePizza ] = useState
+      return <Pizza changeState={setStatePizza}/>
+
+    }
     useEffect(() => {
       console.log(statePizza)
     }, [statePizza])
@@ -123,12 +130,7 @@ function App() {
         <BrowserRouter>
             <Routes>
               <Route exact path="/" element={<Home img={ images[0] }/>}/>
-              <Route path= "/pizzaList" >
-                <PizzaList pizzaList={statePizza}/>
-              </Route>
-              <Route path= "/pastaList" component={<PastaList/>} /> 
-              <Route path="/SideDishesList" component={<SideDishesList/>}/>
-              <Route path="/BeveragesList" component={<BeveragesList/>}/>
+                <Route path= "/PizzaList" element={<PizzaList/>}/>
             </Routes>
         </BrowserRouter>
       </div>

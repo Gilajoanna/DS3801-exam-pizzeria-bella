@@ -9,6 +9,7 @@ import '@fontsource/roboto/700.css';
 import '../style2.css';
 
 import PastaList from './PastaList';
+import PizzaList from './PizzaList';
 
 
 
@@ -24,7 +25,7 @@ export default function OrderOnline(){
     
             <Box sx={{ flexDirection: 'column', justifyContent: 'center', textAlign: 'center', margin: '2em' }} item xs={6}>
                 <Button 
-                    component= {Link} to='/pizzaList'
+                    component= {Link} to='/PizzaList'
                     style={{ backgroundColor: '#FFFFFF', color: '#1D1F2C', letterSpacing: '4px', fontSize: 28, borderColor: '#1D1F2C'}} 
                     className='orderOnline-button' variant="outlined"  size="large">PIZZA  
                 </Button>

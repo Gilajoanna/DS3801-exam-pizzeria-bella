@@ -8,7 +8,21 @@ import PizzaCard from './PizzaCard';
 import Navbar from './navbar/Navbar';
 
 export default function PizzaList({pizzaList, addPizzaToCart}) {
-    /*
+   
+    const pizza = [
+        { name: "MARGHERITA", description: "Tomato sauce, mozzarella, basil, oregano", allergens:"WHEAT, MILK", price: 189 },
+        { name: "PIZZA ALLA SALSICCIA", description: "Tomato sauce, mozzarella, Salsiccia piccante, olives, red onion, ruccula, parmesan", allergens:"WHEAT, MILK", price:229 },
+        { name: "PIZZA POLLO", description: "Tomato sauce, mozzarella, chicken, red onion, garlic, olives, ruccula, pesto rosso, parmesan", allergens:"WHEAT, MILK, CASHEW NUTS", price: 229 },
+        { name: "PIZZA CON GAMBERI", description: "Tomato sauce, mozzarella, chili and garlic marinated scampi, red onion, parsley, lime", allergens:"WHEAT, SHELLFISH, MILK", price: 229 },
+        { name: "PROSCIUTTO E FUNGHI", description: "Tomato sauce, mozzarella, ham, mushrooms", allergens:"WHEAT, MILK", price: 199 },
+        { name: "PIZZA SALAME", description: "Tomato sauce, mozzarella, pepperoni Calabra, red onion, cherry tomato", allergens:"WHEAT, MILK", price: 229},
+        { name: "PARMA", description: "Tomato sauce, mozzarella, parma ham, ruccula, parmesan", allergens:"WHEAT, MILK", price: 229 },
+        { name: "PIZZA PANCHETTA", description: "Tomato sauce, mozzarella, pancetta, red onion, parmesan, oregano", allergens:"WHEAT, MILK", price: 229 },
+        { name: "CALABRESE", description: "Tomato sauce, mozzarella, Marchisio salami with black truffle, truffle oil, ruccula", allergens:"WHEAT, MILK, SULPHITES", price: 229 },
+        { name: "INFERNO", description: "Tomato sauce, mozzarella, Negrini salami spicy pepperoni, marinated chili pepper", allergens:"WHEAT, MILK", price: 229 }
+    ]
+    
+     /*
     let history = useHistory();
 
     const goToCartPizza = () => {
@@ -27,8 +41,6 @@ export default function PizzaList({pizzaList, addPizzaToCart}) {
                 </Container>
             </header>
             <Typography>
-                component="h1"
-                variant="h3"
             </Typography>
 
             <Button sx={{ justifyContent: 'flex-end', color: '#1D1F2C', letterSpacing: '4px', fontSize: 20 }} 
@@ -45,8 +57,8 @@ export default function PizzaList({pizzaList, addPizzaToCart}) {
 
             <Container maxWidth="md"> 
                 <Grid container spacing={3}>
-                    {pizzaList.map((pizza, index) => {
-                        <><Grid item xs={12} lg={6} key={index}><PizzaCard pizza={pizza} /></Grid></>
+                    {pizza.map((pizza) => {
+                        <><Grid item xs={12} lg={6} key={pizza.name}><PizzaCard pizza={pizza} /></Grid></>
                     })}
                 </Grid>
             </Container>
