@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import images from './images/images';
 import PizzaList from './components/PizzaList';
+import CheckOut from './components/checkout/CheckOut';
 import PastaList from './components/PastaList';
 import SideDishesList from './components/SideDishesList';
 import BeveragesList from './components/BeveragesList';
@@ -129,8 +130,9 @@ function App() {
       <div className="App">
         <BrowserRouter>
             <Routes>
-              <Route exact path="/" element={<Home img={ images[0] }/>}/>
-                <Route path= "/PizzaList" element={<PizzaList/>}/>
+              <Route exact path="/" element={ <Home img={ images[0] } /> } />
+                <Route path= "/pizzaList" element={ <PizzaList/> } />
+                <Route path= "/checkOut" element={ <CheckOut /> } />
             </Routes>
         </BrowserRouter>
       </div>

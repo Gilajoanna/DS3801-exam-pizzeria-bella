@@ -24,11 +24,10 @@ function NavBarLinks() {
                 </Button>
 
                 <Button sx={{ justifyContent: 'flex-end', color: '#1D1F2C', letterSpacing: '4px', fontSize: 20 }} 
-                        className='navbar-button' variant="text" size="medium">ABOUT US
+                        className='navbar-button' variant="text" size='medium'>ABOUT US
                 </Button>
 
-                <IconButton 
-                    color="primary" aria-label="add to shopping cart">
+                <IconButton  component={ Link } to='/checkOut' color='primary' aria-label='add to shopping cart'>
                      <AddShoppingCartIcon className='shopping-cart' sx={{ justifyContent: 'flex-end', color: '#1D1F2C', letterSpacing: '4px', fontSize: 40 }} />
                 </IconButton>
             </Toolbar>
