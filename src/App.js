@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
 import images from './images/images';
-import PizzaList from "./components/products/PizzaList";
+import PizzaList from "./components/PizzaList";
 import CheckOut from './components/checkout/CheckOut';
 import './style2.css';
 
@@ -70,13 +70,13 @@ function App() {
       {name:"AMERICANO", description:"100% Arabica dark roast", price: 44 }
     ])
 
-
+    
     const addPizzaToCart = (name, description, allergens, price) => {
       setStatePizza(prevState => {
         return [...prevState, {name, description, allergens, price}]
       })
     }
- 
+    
 
     const addPastaToCart = (name, description, allergens, price) => {
       setStatePasta(prevState => {
@@ -96,17 +96,17 @@ function App() {
       })
     }
 
-  
+    
     const Pizza = () => {
       const [ statePizza, setStatePizza ] = useState
       return <Pizza changeState={setStatePizza}/>
     }
 
-
+    
     useEffect(() => {
       console.log(statePizza)
     }, [statePizza])
-   
+    
     
     useEffect(() => {
       console.log(statePasta)
@@ -127,7 +127,7 @@ function App() {
         <BrowserRouter>
             <Routes>
               <Route exact path="/" element={ <Home img={ images[0] } /> } />
-                <Route path= "/pizzaList" element={ <PizzaList /> } />
+                <Route path= "/pizzaList" element={ <PizzaList pizzaList={statePizza}/> } />
                 <Route path= "/checkOut" element={ <CheckOut /> } />
             </Routes>
         </BrowserRouter>

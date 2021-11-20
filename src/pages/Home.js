@@ -14,12 +14,8 @@ function Home(props) {
             <Navbar />
             <HeroImg img={ props.img } />
             <OrderOnline/>
-<<<<<<< HEAD
-        </main>        
-=======
-            <PizzaList/>    
-       </div>  
->>>>>>> e7f06c87a97260d2e7524608ae260d6bf344e1e0
+        
+        </div>      
     );
 }
 
