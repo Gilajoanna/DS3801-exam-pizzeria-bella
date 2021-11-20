@@ -4,7 +4,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
 import images from './images/images';
+<<<<<<< HEAD
 import PizzaList from "./components/PizzaList";
+=======
+// import PizzaList from "./components/products/PizzaList";
+>>>>>>> ad9c5a8f36c5a14d28cfe344acd57172eff0d722
 import CheckOut from './components/checkout/CheckOut';
 import './style2.css';
 
@@ -127,7 +131,10 @@ function App() {
         <BrowserRouter>
             <Routes>
               <Route exact path="/" element={ <Home img={ images[0] } /> } />
+<<<<<<< HEAD
                 <Route path= "/pizzaList" element={ <PizzaList pizzaList={statePizza}/> } />
+=======
+>>>>>>> ad9c5a8f36c5a14d28cfe344acd57172eff0d722
                 <Route path= "/checkOut" element={ <CheckOut /> } />
             </Routes>
         </BrowserRouter>
