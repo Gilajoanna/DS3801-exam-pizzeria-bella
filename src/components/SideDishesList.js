@@ -3,17 +3,22 @@ import { Container, Fab, Grid } from '@mui/material';
 import { useHistory } from 'react-router';
 
 import SideDishesCard from './SideDishesCard';
+import Navbar from './navbar/Navbar';
 
-export default function SideDishesList({addAddOnsList: addSideDishesList, addSideDishesToCart}) {
+export default function SideDishesList({ addSideDishesList, addSideDishesToCart }) {
+
     /*
     let history = useHistory();
 
     const goToCartAddOns = () => {
-        history.push("/addAddOnToCart")
+        history.push("/addSideDishesToCart")
     }
     */
 
+
     return (
+        <>
+        <Navbar/>
         <Container maxWidth="md"> 
             <Grid container spacing={3}>
                 {addSideDishesList.map((sideDish, index) => {
@@ -21,5 +26,6 @@ export default function SideDishesList({addAddOnsList: addSideDishesList, addSid
                 })}
             </Grid>
         </Container>
+        </>
     )
 }

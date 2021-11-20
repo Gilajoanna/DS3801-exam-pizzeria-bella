@@ -1,19 +1,14 @@
 import { Container, Fab, Grid } from '@mui/material';
-import { useHistory } from 'react-router';
 
 import PastaCard from './PastaCard';
+import Navbar from './navbar/Navbar';
 
-export default function PastaList({pastaList, addPastaToCart}) {
-    /*
-    let history = useHistory();
 
-    const goToCartPasta = () => {
-        history.push("/addPastaToCart")
-    }
-    */
 
-    
+function PastaList({pastaList, addPastaToCart}) {
     return (
+        <>
+        <Navbar/>
         <Container maxWidth="md"> 
             <Grid container spacing={3}>
                 {pastaList.map((pasta, index) => {
@@ -21,6 +16,9 @@ export default function PastaList({pastaList, addPastaToCart}) {
                 })}
             </Grid>
         </Container>
+        </>
     );
 
 }
+
+export default PastaList;
