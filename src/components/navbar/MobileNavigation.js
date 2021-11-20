@@ -36,7 +36,7 @@ function MobileNavigation() {
                 </ThemeProvider>
                 <MenuIcon className='nav-burger' sx={{ justifyContent: 'flex-end', color: '#1D1F2C', letterSpacing: '4px', fontSize: 40 }} 
                 onClick={ () => setClickedNav(!clickedNav) }/>
-                { clickedNav && <NavBarLinks sx={{ ml: 4, mr: 4 }} /> }
+                { clickedNav && <NavBarLinks sx={{ mt: 5, ml: 4, mr: 4 }} /> }
                 </Grid>
         </nav>
     ); 

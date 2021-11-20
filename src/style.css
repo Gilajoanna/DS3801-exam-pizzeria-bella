@@ -43,6 +43,7 @@
 
     .nav-burger {
         position: relative;
+        top: 30%;
         right: 5%;
         cursor: pointer;
     }
