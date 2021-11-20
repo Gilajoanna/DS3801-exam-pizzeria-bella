@@ -1,4 +1,5 @@
 import React from "react";
+import { Container } from "@mui/material";
 
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -13,10 +14,10 @@ import '../../style2.css';
 
 function Navbar() {
     return (
-        <div>
+        <Container className='nav-container' maxWidth='xl'>
             <Navigation />
-            <MobileNavigation />
-        </div>    
+            <MobileNavigation /> 
+        </Container>
     )
 }
 
