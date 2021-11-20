@@ -2,16 +2,20 @@ import React from 'react';
 import { Card, CardContent, CardHeader, Typography} from '@mui/material';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router';
+import PizzaList from './PizzaList';
 
 
 function PizzaCard({ pizza }){
 
+    /*
     const navigate = useNavigate();
 
     const goToPastaMenu = () => {
         navigate('/pastaList')
     }
-
+    console.log(pizza.name)
+    */
+    console.log(pizza.name)
     return (
     <>
     <main>
@@ -19,6 +23,7 @@ function PizzaCard({ pizza }){
             <CardHeader/>
                 <Typography>
                     {pizza.name}
+                    
                 </Typography>
                 <CardContent>
                     <Typography>
