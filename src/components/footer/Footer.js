@@ -3,7 +3,7 @@ import React from 'react';
 
 function Footer() {
     return(
-        <footer>
+        <footer className="footer-container">
             <Container maxWidth="xl">
                 <Box sx={{ m: 10 }}>
                     <Grid container spacing={3}>

@@ -143,7 +143,6 @@ function App() {
                 <Route path= "/sideDishesList" element={ <SideDishesList sideDishesList={stateSideDishes} /> } />
                 <Route path= "/beveragesList" element={ <BeveragesList beveragesList={stateBeverage} /> } />
                 <Route path= "/checkOut" element={ <CheckOut /> } />
-                <Route path= "/footer" element={ <Footer /> } />
                 <Route path= "/orderOnline" element={ <OrderOnline /> } />
             </Routes>
         </BrowserRouter>
