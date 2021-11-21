@@ -86,6 +86,8 @@ function App() {
         return [...prevState, {name, description, allergens, price}]
       })
     }
+
+    const {cartItems, setCartItems} = useState([]);
      /*
 
     const addPastaToCart = (name, description, allergens, price) => {
