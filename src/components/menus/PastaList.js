@@ -63,7 +63,6 @@ function PastaList({pastaList, addPastaToCart}) {
         <Footer />
         </>
     );
-
 }
 
 export default PastaList;

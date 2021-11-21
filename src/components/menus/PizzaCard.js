@@ -1,17 +1,22 @@
 import React from 'react';
-import { Card, CardContent, CardHeader, Typography, Button, Grid, Container} from '@mui/material';
+import { Card, CardContent, CardHeader, Typography, Button, Grid} from '@mui/material';
 
 import '../../style2.css';
 
-export default function PizzaCard({ pizza, addPizzaToCart }){
+
+
+export default function PizzaCard({ pizza, addPizzaToCart, props }){
+    
+    /*const {pizzaList, onAdd} = props;*/
+    
  
-     
     return (
     <main>
         <Grid item lg={12} sx={{flexDirection: 'column'}}>
                 <Card className="card">
                     <CardHeader/>
-                        <Button sx={{ justifyContent: 'flex-end', color: '#1D1F2C', letterSpacing: '4px', fontSize: 18, borderColor: '#1D1F2C' }} 
+                        <Button /*onClick={()=> onAdd(pizzaList)}*/
+                            sx={{ justifyContent: 'flex-end', color: '#1D1F2C', letterSpacing: '4px', fontSize: 18, borderColor: '#1D1F2C' }} 
                             className='add-button' variant="outlined" size="small">ADD
                         </Button>
                     <CardContent>

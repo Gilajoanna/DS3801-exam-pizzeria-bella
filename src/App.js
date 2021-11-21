@@ -9,6 +9,7 @@ import PizzaList from "./components/menus/PizzaList";
 import PastaList from "./components/menus/PastaList";
 import SideDishesList from './components/menus/SideDishesList';
 import BeveragesList from './components/menus/BeveragesList';
+import Basket from "./components/checkout/Basket";
 
 import './style2.css';
 import PizzaCard from "./components/menus/PizzaCard";
@@ -114,7 +115,6 @@ function App() {
     /*const pizzaItems = (name, description, allergens, price) => {
       
     }*/
-  
 
     
     useEffect(() => {
@@ -135,8 +135,24 @@ function App() {
       console.log(stateBeverage)
     }, [stateBeverage])
 
+    //Add item to shoppingcart
+    /*
+    const { pizzaList } = statePizza;
     const [shoppingCartItems, setShoppingCartItems] = useState([]);
-
+    const onAdd = (pizzaList) => {
+      const exist = shoppingCartItems.find(x => x.id === pizzaList.id);
+      if (exist) {
+        setShoppingCartItems(
+          shoppingCartItems.map(x => 
+            x.id === pizzaList.id ? {...exist, qty: exist.qty + 1 }: x
+          )
+        );
+      } else {
+        setShoppingCartItems([...shoppingCartItems, {...pizzaList, qty: 1}])
+      }
+    }
+*/
+    /*
     const addPizzaToCart = (pizza) => {
       const exist = shoppingCartItems.find(x => x.id === pizza.id);
       if (exist) {
@@ -148,18 +164,33 @@ function App() {
       } else {
           setShoppingCartItems([...shoppingCartItems, { ...pizza, qty: 1}]);
       }
-  };
+    };
+*/
+    /*
+    const addPizzaToCart = (pizza) => {
+      const exist = shoppingCartItems.find(x => x.id === pizza.id);
+      if (exist) {
+          setShoppingCartItems(
+              shoppingCartItems.map((x) =>
+                  x.id === pizza.id ? { ...exist, qty: exist.qty + 1 } : x
+              )
+          );
+      } else {
+          setShoppingCartItems([...shoppingCartItems, { ...pizza, qty: 1}]);
+      }
+    };
     
+    */
     return (
       <div className="App">
         <BrowserRouter>
             <Routes>
               <Route exact path="/" element={ <Home img={ images[0] } /> } />
-                <Route path= "/pizzaList" element={ <PizzaList addPizzaToCart={addPizzaToCart} pizzaList={statePizza} addPizzaToCart={stateCheckOut}/>}/> 
+                <Route path= "/pizzaList" element={ <PizzaList pizzaList={statePizza} />}/> 
                 <Route path= "/pastaList" element={ <PastaList pastaList={statePasta}/>}/> 
                 <Route path= "/sideDishesList" element={ <SideDishesList sideDishesList={stateSideDishes} /> } />
                 <Route path= "/beveragesList" element={ <BeveragesList beveragesList={stateBeverage} /> } />
-                <Route path= "/checkOut" element={ <CheckOut shoppingCartItems={shoppingCartItems} addPizzaToCart={addPizzaToCart} /> } />
+                <Route path= "/checkOut" element={ <CheckOut /*onAdd={onAdd}shoppingCartItems={shoppingCartItems} */  /> } />
                 <Route path= "/orderOnline" element={ <OrderOnline /> } />
             </Routes>
         </BrowserRouter>

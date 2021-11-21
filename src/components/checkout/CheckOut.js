@@ -4,10 +4,21 @@ import { Box, Container, Typography, Button, Grid } from "@mui/material";
 import Navbar from '../navbar/Navbar';
 import Footer from '../footer/Footer';
 import Basket from './Basket';
-import PizzaList from '../menus/PizzaList';
 
-function CheckOut({ addPizzaToCart, shoppingCartItems }) {
 
+function CheckOut({ addPizzaToCart, shoppingCartItems, props }) {
+    
+    /*
+    const { pizzaList, onAdd } = props;
+    <div>
+        {pizzaList.map(()=>(
+        <PizzaList key={pizzaList.id} pizzaList={pizzaList} onAdd={onAdd}></PizzaList>
+        ))}
+    </div>
+    */
+
+
+    
     return(
         <>
             <Navbar />
@@ -18,7 +29,7 @@ function CheckOut({ addPizzaToCart, shoppingCartItems }) {
                             <Typography component="h1" variant="h6" sx={{ letterSpacing: '4px' }}>
                                 YOUR ORDER
                             </Typography>
-                            <Basket addPizzaToCart={addPizzaToCart} shoppingCartItems={ shoppingCartItems } />
+                            
                             <Button sx={{ backgroundColor: '#1D1F2C', mt: 2, fontSize: 18, width: '15em', color: 'white' }} variant="text">GO TO PAYMENT</Button>
                         </Grid> 
                         <Grid item xs={12} lg={5}>
@@ -39,5 +50,4 @@ function CheckOut({ addPizzaToCart, shoppingCartItems }) {
         </>
     );
 }
-
 export default CheckOut;
