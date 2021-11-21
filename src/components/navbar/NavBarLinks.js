@@ -26,7 +26,7 @@ function NavBarLinks() {
                         className='navbar-button' variant="text" size='medium'>ABOUT US
                 </Button>
 
-                <IconButton component={ Link } to='/checkOut' color='primary' aria-label='shopping cart'>
+                <IconButton component={ Link } to="/checkOut" color='primary' aria-label='shopping cart'>
                      <AddShoppingCartIcon className='shopping-cart' sx={{ justifyContent: 'flex-end', color: '#1D1F2C', letterSpacing: '4px', fontSize: 45 }} />
                 </IconButton>
             </Toolbar>

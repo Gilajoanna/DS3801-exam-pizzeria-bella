@@ -26,7 +26,7 @@ function Navigation () {
                 <ThemeProvider theme={theme}>
                 <Typography className="nav-header"
                     component="h1"
-                    variant="h3"
+                    variant="h2"
                     noWrap
                     sx={{ flex: 1, mb: 4, mt: 5, ml: 4, letterSpacing: '6px', fontWeight: 700, color: "#0C4916" }}>
                     <Link style={{ textDecoration: 'none', color: 'inherit' }} to="/">PIZZERIA BELLA</Link>

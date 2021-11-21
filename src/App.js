@@ -10,10 +10,10 @@ import PastaList from "./components/PastaList";
 import SideDishesList from './components/SideDishesList';
 import BeveragesList from './components/BeveragesList';
 
-
-
 import './style2.css';
 import PizzaCard from "./components/PizzaCard";
+import Footer from './components/footer/Footer';
+import OrderOnline from "./components/OrderOnline";
 
 
 
@@ -141,6 +141,8 @@ function App() {
                 <Route path= "/sideDishesList" element={ <SideDishesList sideDishesList={stateSideDishes} /> } />
                 <Route path= "/beveragesList" element={ <BeveragesList beveragesList={stateBeverage} /> } />
                 <Route path= "/checkOut" element={ <CheckOut /> } />
+                <Route path= "/footer" element={ <Footer /> } />
+                <Route path= "/orderOnline" element={ <OrderOnline /> } />
             </Routes>
         </BrowserRouter>
       </div>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Box, Container, Typography, Button, Grid } from "@mui/material";
 
 import Navbar from '../navbar/Navbar';
+import Footer from '../footer/Footer';
 
 function CheckOut() {
 
@@ -31,6 +32,7 @@ function CheckOut() {
                     </Grid>
                 </Box>   
             </Container>
+            <Footer />
         </>
     );
 }
