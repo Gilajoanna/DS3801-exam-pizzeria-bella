@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, Typography, Button, Grid, Container} from '@mui/material';
-import { useNavigate } from 'react-router-dom';
+
+import '../../style2.css';
 
 export default function PizzaCard({ pizza, addPizzaToCart }){
  
@@ -14,16 +15,16 @@ export default function PizzaCard({ pizza, addPizzaToCart }){
                             className='add-button' variant="outlined" size="small">ADD
                         </Button>
                     <CardContent>
-                        <Typography sx={{ fontsize: 16}} color="text.secondary" gutterBottom> 
+                        <Typography  className="title" sx={{ fontsize: 16}} color="text.secondary" gutterBottom > 
                             { pizza.name }    
                         </Typography>
-                        <Typography sx={{ fontsize: 16}} color="text.secondary" gutterBottom> 
+                        <Typography className="description" sx={{ fontsize: 16}} color="text.secondary" gutterBottom> 
                             { pizza.description }  
                         </Typography>
-                        <Typography sx={{ fontsize: 16}} color="text.secondary" gutterBottom> 
+                        <Typography className="allergens" sx={{ fontsize: 10}} color="text.secondary" gutterBottom> 
                             { pizza.allergens }   
                         </Typography>
-                        <Typography sx={{ fontsize: 16}} color="text.secondary" gutterBottom> 
+                        <Typography variant="h6" lassName="price" sx={{ fontsize: 10}} color="text.secondary" gutterBottom> 
                             { pizza.price }   
                         </Typography>                
                     </CardContent>

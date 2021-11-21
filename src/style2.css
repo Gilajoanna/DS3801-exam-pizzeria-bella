@@ -53,7 +53,26 @@
 }
 
 .card{
+    background-color: #F8F6F2;
+    display: inline;
   
+}
+
+.title{
+    
+
+}
+
+.description {
+
+}
+
+.allergens {
+
+}
+
+.price {
+
 }
 
 .toNextMenu-button{
@@ -67,7 +86,7 @@
 
 .add-button{
     float: right;
-    ;
+    
 }
 
 .home {
