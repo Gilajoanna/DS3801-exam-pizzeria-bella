@@ -10,18 +10,22 @@ export default function PastaCard({ pasta, addPastaToCart }){
         <main>
             <Card className="card">
                 <CardHeader/>
+                        <Button sx={{ justifyContent: 'flex-end', color: '#1D1F2C', letterSpacing: '4px', fontSize: 18, borderColor: '#1D1F2C' }} 
+                            className='navbar-button' variant="outlined" size="medium">ADD
+                        </Button>
                     <CardContent>
                         <Typography sx={{ fontsize: 16}} color="text.secondary" gutterBottom> 
                             { pasta.name }    
                         </Typography>
-                        <Typography sx={{fontsize: 14}} color="text.secondary" gutterBottom>
-                            { pasta.description }
-                            { pasta.allergens }
-                            { pasta.price }
+                        <Typography sx={{ fontsize: 16}} color="text.secondary" gutterBottom> 
+                            { pasta.description }   
                         </Typography>
-                        <Button sx={{ justifyContent: 'flex-end', color: '#1D1F2C', letterSpacing: '4px', fontSize: 20 }} 
-                            className='navbar-button' variant="text" size="medium">ADD
-                        </Button>
+                        <Typography sx={{ fontsize: 16}} color="text.secondary" gutterBottom> 
+                            { pasta.allergens }   
+                        </Typography>
+                        <Typography sx={{ fontsize: 16}} color="text.secondary" gutterBottom> 
+                            { pasta.price }  
+                        </Typography>
                     </CardContent>
                 <CardHeader/>
             </Card>
