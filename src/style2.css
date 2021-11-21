@@ -53,18 +53,21 @@
 }
 
 .card{
-   
+  
 }
 
 .toNextMenu-button{
     width: 9em;
     height: 2em;
     border: solid;
-    border-color: #1D1F2C;
+    border-color: #1D1F2C, solid;
+    font-weight: 500;
+
 }
 
 .add-button{
     float: right;
+    ;
 }
 
 .home {

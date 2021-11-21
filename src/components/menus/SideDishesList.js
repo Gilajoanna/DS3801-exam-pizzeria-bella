@@ -35,17 +35,17 @@ function SideDishesList({ sideDishesList, addSideDishesToCart }) {
             <h3>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</h3>
             </Typography>
             <Box sx={{ justifyContent: 'center', justifyContent:"space-between", textAlign: 'center', margin: '2em' }} item xs={6}>
-                <Button style ={{ backgroundColor: '#FFFFFF', color: '#1D1F2C', letterSpacing: '4px', fontSize: 28, borderColor: '#1D1F2C', variant:"outlined"}} 
+                <Button style ={{ backgroundColor: '#FFFFFF', color: '#1D1F2C', letterSpacing: '4px', fontSize: 24, borderColor: '#1D1F2C', variant:"outlined"}} 
                         onClick ={() => goToPizzaMenu()} 
                         className='toNextMenu-button' variant="outlined">PIZZA 
                 </Button>
 
-                <Button style ={{ backgroundColor: '#FFFFFF', color: '#1D1F2C', letterSpacing: '4px', fontSize: 28, borderColor: '#1D1F2C', variant:"outlined"}} 
+                <Button style ={{ backgroundColor: '#FFFFFF', color: '#1D1F2C', letterSpacing: '4px', fontSize: 24, borderColor: '#1D1F2C', variant:"outlined", marginLeft: '10px', marginRight: '10px'}} 
                         onClick ={() => goToPastaMenu()}
                         className='toNextMenu-button' variant="outlined">PASTA 
                 </Button>
 
-                <Button style ={{ backgroundColor: '#FFFFFF', color: '#1D1F2C', letterSpacing: '4px', fontSize: 28, borderColor: '#1D1F2C', variant:"outlined"}} 
+                <Button style ={{ backgroundColor: '#FFFFFF', color: '#1D1F2C', letterSpacing: '4px', fontSize: 24, borderColor: '#1D1F2C', variant:"outlined"}} 
                         onClick ={() => goToBeveragesMenu()}
                         className='toNextMenu-button' variant="outlined">BEVERAGE
                 </Button>
