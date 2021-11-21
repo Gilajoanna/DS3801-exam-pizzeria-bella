@@ -81,13 +81,14 @@ function App() {
     const [stateCheckOut, setStateCheckOut] = useState (() => [])
 
    
-    const addPizzaToCart = (name, description, allergens, price) => {
+    /* const addPizzaToCart = (name, description, allergens, price) => {
       setStatePizza(prevState => {
         return [...prevState, {name, description, allergens, price}]
       })
     }
+    */
 
-    const {cartItems, setCartItems} = useState([]);
+
      /*
 
     const addPastaToCart = (name, description, allergens, price) => {
@@ -133,18 +134,32 @@ function App() {
     useEffect(() => {
       console.log(stateBeverage)
     }, [stateBeverage])
-    
 
+    const [shoppingCartItems, setShoppingCartItems] = useState([]);
+
+    const addPizzaToCart = (pizza) => {
+      const exist = shoppingCartItems.find(x => x.id === pizza.id);
+      if (exist) {
+          setShoppingCartItems(
+              shoppingCartItems.map((x) =>
+                  x.id === pizza.id ? { ...exist, qty: exist.qty + 1 } : x
+              )
+          );
+      } else {
+          setShoppingCartItems([...shoppingCartItems, { ...pizza, qty: 1}]);
+      }
+  };
+    
     return (
       <div className="App">
         <BrowserRouter>
             <Routes>
               <Route exact path="/" element={ <Home img={ images[0] } /> } />
-                <Route path= "/pizzaList" element={ <PizzaList pizzaList={statePizza} addPizzaToCart={stateCheckOut}/>}/> 
+                <Route path= "/pizzaList" element={ <PizzaList addPizzaToCart={addPizzaToCart} pizzaList={statePizza} addPizzaToCart={stateCheckOut}/>}/> 
                 <Route path= "/pastaList" element={ <PastaList pastaList={statePasta}/>}/> 
                 <Route path= "/sideDishesList" element={ <SideDishesList sideDishesList={stateSideDishes} /> } />
                 <Route path= "/beveragesList" element={ <BeveragesList beveragesList={stateBeverage} /> } />
-                <Route path= "/checkOut" element={ <CheckOut /> } />
+                <Route path= "/checkOut" element={ <CheckOut shoppingCartItems={shoppingCartItems} addPizzaToCart={addPizzaToCart} /> } />
                 <Route path= "/orderOnline" element={ <OrderOnline /> } />
             </Routes>
         </BrowserRouter>
