@@ -1,20 +1,11 @@
 
 import { Container, Fab, Grid } from '@mui/material';
-import { useHistory } from 'react-router';
 
+import OrderOnline from './OrderOnline';
 import SideDishesCard from './SideDishesCard';
 import Navbar from './navbar/Navbar';
 
 export default function SideDishesList({ addSideDishesList, addSideDishesToCart }) {
-
-    /*
-    let history = useHistory();
-
-    const goToCartAddOns = () => {
-        history.push("/addSideDishesToCart")
-    }
-    */
-
 
     return (
         <>

@@ -1,8 +1,7 @@
-import { Container, Fab, Grid } from '@mui/material';
-import { Typography } from '@mui/material';
-import { useState } from 'react'
+import React, { useState, useEffect, useNavigate, useHistory} from 'react';
+import { Link } from 'react-router-dom';
+import { Container, Fab, Grid, Typography } from '@mui/material';
 import Button from '@mui/material/Button';
-import { useNavigate } from 'react-router-dom'
 
 import PizzaCard from './PizzaCard';
 import Navbar from './navbar/Navbar';
@@ -10,33 +9,20 @@ import Navbar from './navbar/Navbar';
 
 
 function PizzaList({ pizzaList, addPizzaToCart}) {
+
     return (
     <>    
-
+    <Container className="pizzaMenu-container" maxWidth="xl">
         <Navbar/>
-
-        <Container maxwidth="md">
-            <Typography>
-                <h1>PIZZA</h1>
-            </Typography>
-            <Button sx={{ justifyContent: 'flex-end', color: '#1D1F2C', letterSpacing: '4px', fontSize: 20 }}
-            className='pizzaGoToPsta' variant="contained" size="medium">PASTA
-            </Button>
-
-            <Button sx={{ justifyContent: 'flex-end', color: '#1D1F2C', letterSpacing: '4px', fontSize: 20 }} 
-            className='pizzaGoToSideDishes' variant="contained" size="medium">SIDE DISHES
-            </Button>
-
-            <Button sx={{ justifyContent: 'flex-end', color: '#1D1F2C', letterSpacing: '4px', fontSize: 20 }} 
-            className='pizzaGoToDrinks' variant="contained" size="medium">DRINKS
-            </Button>
-            <PizzaCard/>
+        <Typography sx={{ justifyContent: 'center', textAlign: 'center', margin: '2em', letterSpacing: '8px', fontSize: '48px' }}>
+            <h1>PIZZA</h1>
+        </Typography>
             <Grid container spacing={3}>
                 {pizzaList.map((pizza, index) => {
                     return <Grid item xs={12} lg={6} key={index}><PizzaCard pizza={pizza} /></Grid>
                 })}
             </Grid>
-        </Container>  
+    </Container>  
     </>
     );
     

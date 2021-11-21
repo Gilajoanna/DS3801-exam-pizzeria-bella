@@ -1,8 +1,7 @@
-import { DeleteOutlined } from '@mui/icons-material';
-import { Card, CardContent, CardHeader} from '@mui/material';
-import { Typography } from '@mui/material';
-import Button from '@mui/material/Button';
 import React from 'react';
+import { Card, CardContent, CardHeader, Typography } from '@mui/material';
+import Button from '@mui/material/Button';
+
 
 
 function BeveragesCard({ beverage, addBeverageToCart }){
@@ -19,7 +18,7 @@ function BeveragesCard({ beverage, addBeverageToCart }){
                         <p>{beverage.price}</p>
                     </Typography>
                     <Button sx={{ justifyContent: 'flex-end', color: '#1D1F2C', letterSpacing: '4px', fontSize: 20 }} 
-                        className='navbar-button' variant="text" size="medium">ADD
+                        className='add-button' variant="text" size="medium">ADD
                     </Button>
                 </CardContent>
             <CardHeader/>

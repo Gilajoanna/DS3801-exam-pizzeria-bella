@@ -1,5 +1,5 @@
 import { DeleteOutlined } from '@mui/icons-material';
-import { Card, CardContent, CardHeader} from '@mui/material';
+import { Card, CardContent, CardHeader, Container} from '@mui/material';
 import { Typography } from '@mui/material';
 import Button from '@mui/material/Button';
 import React from 'react';
@@ -9,6 +9,7 @@ export default function PastaCard({ pasta, addPastaToCart }){
 
     return (
         <main>
+            
             <Card elevation={3}>
                 <CardHeader/>
                     <CardContent>
@@ -26,6 +27,7 @@ export default function PastaCard({ pasta, addPastaToCart }){
                     </CardContent>
                 <CardHeader/>
             </Card>
+           
         </main>
     )
 }

@@ -1,44 +1,31 @@
 import React from 'react';
-import { Card, CardContent, CardHeader, Typography} from '@mui/material';
-import Button from '@mui/material/Button';
-import { useNavigate } from 'react-router';
-import PizzaList from './PizzaList';
+import { Card, CardContent, CardHeader, Button, Container} from '@mui/material';
+import { Typography } from '@mui/material';
 
+export default function PizzaCard({ pizza, addPizzaToCart }){
 
-function PizzaCard({ pizza }){
-
-    /*
-    const navigate = useNavigate();
-
-    const goToPastaMenu = () => {
-        navigate('/pastaList')
-    }
-    console.log(pizza.name)
-    */
-    console.log(pizza.name)
     return (
     <>
-    <main>
+    <Container className="checkout-container" maxWidth="xl">
         <Card elevation={3}>
             <CardHeader/>
                 <Typography>
                     {pizza.name}
-                    
                 </Typography>
-                <CardContent>
-                    <Typography>
-                        {pizza.description}
-                        {pizza.allergens}
-                        {pizza.price}
-                    </Typography>
-                    <Button sx={{ justifyContent: 'flex-end', color: '#1D1F2C', letterSpacing: '4px', fontSize: 20 }} 
-                        className='navbar-button' variant="text" size="medium">ADD
-                    </Button>
-                </CardContent>
+            <CardContent>
+                <Typography>
+                    {pizza.description}
+                    {pizza.allergens}
+                    {pizza.price}
+                </Typography>
+                <Button
+                    sx={{ justifyContent: 'flex-end', color: '#1D1F2C', letterSpacing: '4px', fontSize: 20 }} 
+                    className='navbar-button' variant="text" size="medium">ADD
+                </Button>
+            </CardContent>
             <CardHeader/>
         </Card>
-    </main>
+        </Container>
     </>
     )
 }
-export default PizzaCard;

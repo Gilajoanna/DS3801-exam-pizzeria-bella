@@ -4,14 +4,21 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
 import images from './images/images';
-import PizzaList from "./components/PizzaList";
 import CheckOut from './components/checkout/CheckOut';
-import './style2.css';
+import PizzaList from './components/PizzaList';
+import PastaList from "./components/PastaList";
+import SideDishesList from './components/SideDishesList';
+import BeveragesList from './components/BeveragesList';
 
+
+
+import './style2.css';
+import PizzaCard from "./components/PizzaCard";
 
 
 
 function App() {
+
     const [statePizza, setStatePizza] = useState (() => [
       { name: "MARGHERITA", description: "Tomato sauce, mozzarella, basil, oregano", allergens:"WHEAT, MILK", price: 189 },
       { name: "PIZZA ALLA SALSICCIA", description: "Tomato sauce, mozzarella, Salsiccia piccante, olives, red onion, ruccula, parmesan", allergens:"WHEAT, MILK", price:229 },
@@ -25,6 +32,7 @@ function App() {
       { name: "INFERNO", description: "Tomato sauce, mozzarella, Negrini salami spicy pepperoni, marinated chili pepper", allergens:"WHEAT, MILK", price: 229 }
   ])
 
+ 
 
     const [statePasta, setStatePasta] = useState (() => [
         { name:"RISOTTO ALLA VENTRICINA", description:"Risotto, ventricina salami, tomato, onion, garlic and parmesan", allergens:"MILK, SULPHITES", price: 215 },
@@ -70,13 +78,13 @@ function App() {
       {name:"AMERICANO", description:"100% Arabica dark roast", price: 44 }
     ])
 
-    
+    /*
     const addPizzaToCart = (name, description, allergens, price) => {
       setStatePizza(prevState => {
         return [...prevState, {name, description, allergens, price}]
       })
     }
-    
+
 
     const addPastaToCart = (name, description, allergens, price) => {
       setStatePasta(prevState => {
@@ -95,12 +103,13 @@ function App() {
         return [...prevState, {name, description, price}]
       })
     }
+    */
 
     
-    const Pizza = () => {
-      const [ statePizza, setStatePizza ] = useState
-      return <Pizza changeState={setStatePizza}/>
-    }
+    /*const pizzaItems = (name, description, allergens, price) => {
+      
+    }*/
+  
 
     
     useEffect(() => {
@@ -127,7 +136,10 @@ function App() {
         <BrowserRouter>
             <Routes>
               <Route exact path="/" element={ <Home img={ images[0] } /> } />
-                <Route path= "/pizzaList" element={ <PizzaList pizzaList={statePizza}/> } />
+                <Route path= "/pizzaList" element={ <PizzaList pizzaList={statePizza}/>}/> 
+                <Route path= "/pastaList" element={ <PastaList pastaList={statePasta}/>}/> 
+                <Route path= "/sideDishesList" element={ <SideDishesList sideDishesList={stateSideDishes} /> } />
+                <Route path= "/beveragesList" element={ <BeveragesList beveragesList={stateBeverage} /> } />
                 <Route path= "/checkOut" element={ <CheckOut /> } />
             </Routes>
         </BrowserRouter>
