@@ -5,13 +5,13 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import images from './images/images';
 import CheckOut from './components/checkout/CheckOut';
-import PizzaList from './components/PizzaList';
-import PastaList from "./components/PastaList";
-import SideDishesList from './components/SideDishesList';
-import BeveragesList from './components/BeveragesList';
+import PizzaList from "./components/menus/PizzaList";
+import PastaList from "./components/menus/PastaList";
+import SideDishesList from './components/menus/SideDishesList';
+import BeveragesList from './components/menus/BeveragesList';
 
 import './style2.css';
-import PizzaCard from "./components/PizzaCard";
+import PizzaCard from "./components/menus/PizzaCard";
 import Footer from './components/footer/Footer';
 import OrderOnline from "./components/OrderOnline";
 
@@ -78,13 +78,15 @@ function App() {
       {name:"AMERICANO", description:"100% Arabica dark roast", price: 44 }
     ])
 
-    /*
+    const [stateCheckOut, setStateCheckOut] = useState (() => [])
+
+   
     const addPizzaToCart = (name, description, allergens, price) => {
       setStatePizza(prevState => {
         return [...prevState, {name, description, allergens, price}]
       })
     }
-
+     /*
 
     const addPastaToCart = (name, description, allergens, price) => {
       setStatePasta(prevState => {
@@ -136,7 +138,7 @@ function App() {
         <BrowserRouter>
             <Routes>
               <Route exact path="/" element={ <Home img={ images[0] } /> } />
-                <Route path= "/pizzaList" element={ <PizzaList pizzaList={statePizza}/>}/> 
+                <Route path= "/pizzaList" element={ <PizzaList pizzaList={statePizza} addPizzaToCart={stateCheckOut}/>}/> 
                 <Route path= "/pastaList" element={ <PastaList pastaList={statePasta}/>}/> 
                 <Route path= "/sideDishesList" element={ <SideDishesList sideDishesList={stateSideDishes} /> } />
                 <Route path= "/beveragesList" element={ <BeveragesList beveragesList={stateBeverage} /> } />

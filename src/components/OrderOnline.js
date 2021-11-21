@@ -1,7 +1,5 @@
-import { Container, Box, Fab, Grid, Typography } from '@mui/material';
-import Button from '@mui/material/Button';
-import { Link, useNavigate, useHistory } from 'react-router-dom'
-import { useState } from 'react';
+import { Container, Box, Grid, Typography, Button } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
@@ -9,15 +7,8 @@ import '@fontsource/roboto/700.css';
 import '../style2.css';
 
 
-import PizzaList from './PizzaList';
-import PastaList from './PastaList';
-import SideDishesList from './SideDishesList';
-import App from '../App';
+export default function OrderOnline (){
 
-
-export default function OrderOnline ({PizzaList, PastaList, sideDishesList, BeveragesList}){
-
-    //let history = useHistory()
     const navigate = useNavigate()
 
     const goToPizzaMenu = () =>{
