@@ -6,16 +6,13 @@ import '../../style2.css';
 
 
 export default function PizzaCard({ pizza, addPizzaToCart, props }){
-    
-    /*const {pizzaList, onAdd} = props;*/
-    
  
     return (
     <main>
         <Grid item lg={12} sx={{flexDirection: 'column'}}>
                 <Card className="card">
                     <CardHeader/>
-                        <Button /*onClick={()=> onAdd(pizzaList)}*/
+                        <Button onClick={() => addPizzaToCart(pizza)}
                             sx={{ justifyContent: 'flex-end', color: '#1D1F2C', letterSpacing: '4px', fontSize: 18, borderColor: '#1D1F2C' }} 
                             className='add-button' variant="outlined" size="small">ADD
                         </Button>
@@ -29,7 +26,7 @@ export default function PizzaCard({ pizza, addPizzaToCart, props }){
                         <Typography className="allergens" sx={{ fontsize: 10}} color="text.secondary" gutterBottom> 
                             { pizza.allergens }   
                         </Typography>
-                        <Typography variant="h6" lassName="price" sx={{ fontsize: 10}} color="text.secondary" gutterBottom> 
+                        <Typography variant="h6" className="price" sx={{ fontsize: 10}} color="text.secondary" gutterBottom> 
                             { pizza.price }   
                         </Typography>                
                     </CardContent>

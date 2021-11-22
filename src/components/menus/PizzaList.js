@@ -30,11 +30,11 @@ function PizzaList({ pizzaList, props, addPizzaToCart}) {
     <HeroImg/>
     <Container className="pizzaMenu-container" maxWidth="xl">
         
-        <Typography sx={{ justifyContent: 'center', textAlign: 'center', margin: '2em', letterSpacing: '8px', fontSize: '42px' }}>
-            <h1>PIZZA</h1>
+        <Typography component="h3" variant="h3" sx={{ justifyContent: 'center', textAlign: 'center', margin: '2em', letterSpacing: '8px', fontSize: '42px' }}>
+            PIZZA
         </Typography>
-        <Typography sx={{ justifyContent: 'center', textAlign: 'center', margin: '2em', letterSpacing: '2px', fontSize: '14px' }}>
-            <h3>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</h3>
+        <Typography component="h3" variant="h3" sx={{ justifyContent: 'center', textAlign: 'center', margin: '2em', letterSpacing: '2px', fontSize: '14px' }}>
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
         </Typography>
        
         <Box sx={{ justifyContent: 'center', textAlign: 'center', margin: '2em' }} item xs={6}>
@@ -55,7 +55,7 @@ function PizzaList({ pizzaList, props, addPizzaToCart}) {
         </Box>
                 <Grid container spacing={3}>
                     {pizzaList.map((pizza, index) => {
-                        return <Grid item xs={12} lg={6} key={index}><PizzaCard pizza={pizza} /></Grid>
+                        return <Grid item xs={12} lg={6} key={index}><PizzaCard addPizzaToCart={addPizzaToCart} pizza={pizza} /></Grid>
                     })}
                 </Grid>
     </Container> 

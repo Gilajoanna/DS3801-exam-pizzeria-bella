@@ -29,7 +29,7 @@ function CheckOut({ addPizzaToCart, shoppingCartItems, props }) {
                             <Typography component="h1" variant="h6" sx={{ letterSpacing: '4px' }}>
                                 YOUR ORDER
                             </Typography>
-                            
+                            <Basket addPizzaToCart={addPizzaToCart} shoppingCartItems={shoppingCartItems} />
                             <Button sx={{ backgroundColor: '#1D1F2C', mt: 2, fontSize: 18, width: '15em', color: 'white' }} variant="text">GO TO PAYMENT</Button>
                         </Grid> 
                         <Grid item xs={12} lg={5}>
