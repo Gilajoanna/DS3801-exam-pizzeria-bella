@@ -1,7 +1,10 @@
 import { ImagesearchRoller } from "@mui/icons-material";
 
 const images = [
-        "Skjermbilde_2021-11-09_kl._18.22.26.png"
+        "Skjermbilde_2021-11-09_kl._18.22.26.png", 
+        "beverages.png",
+        "pasta.png",
+        "pizza.png"
 ];
 
 export default images;

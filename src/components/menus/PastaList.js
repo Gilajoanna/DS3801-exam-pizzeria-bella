@@ -32,12 +32,14 @@ function PastaList({pastaList, addPastaToCart}) {
         <HeroImg />
         <Container className="pastaMenu-container" maxWidth="xl">
             
-            <Typography component="h1" variant="h1" sx={{ justifyContent: 'center', textAlign: 'center', margin: '2em', letterSpacing: '8px', fontSize: '42px' }}>
+            <Typography variant="h1" sx={{ justifyContent: 'center', textAlign: 'center', margin: '2em', letterSpacing: '8px', fontSize: '42px' }}>
                 PASTA
             </Typography>
-            <Typography component="h3" variant="h3" sx={{ justifyContent: 'center', textAlign: 'center', margin: '2em', letterSpacing: '2px', fontSize: '14px' }}>
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-            </Typography>
+            <Box className="textBox-pasta" sx={{ width: 2/4, justifyContent: 'center', textAlign: 'center', p: 2}}>
+                <Typography component="h3" variant="h3" sx={{ justifyContent: 'center', textAlign: 'center', margin: '2em', letterSpacing: '2px', fontSize: '14px' }}>
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                </Typography>
+            </Box>
             <Box sx={{ justifyContent: 'center', textAlign: 'center', margin: '2em' }} item xs={6}>
                 <Button style ={{ backgroundColor: '#FFFFFF', color: '#1D1F2C', letterSpacing: '4px', fontSize: 24, borderColor: '#1D1F2C', variant:"outlined"}} 
                         onClick ={() => goToPizzaMenu()} 

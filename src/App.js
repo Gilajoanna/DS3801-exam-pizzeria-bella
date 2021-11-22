@@ -133,8 +133,8 @@ function App() {
       console.log(stateBeverage)
     }, [stateBeverage])
 
-    //Add item to shoppingcart
     
+    //Add pizza to shoppingcart
     const { pizzaList } = statePizza;
     const [shoppingCartItems, setShoppingCartItems] = useState([]);
 

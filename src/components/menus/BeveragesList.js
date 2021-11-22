@@ -4,9 +4,10 @@ import { useNavigate } from 'react-router-dom';
 import BeveragesCard from './BeveragesCard';
 import Navbar from '../navbar/Navbar';
 import HeroImg from '../HeroImg';
+import images from '../../images/images';
 import Footer from '../footer/Footer';
 
-function BeveragesList({ beveragesList, addBeveragesToCart }) {
+function BeveragesList({ beveragesList, addBeveragesToCart, props }) {
    
     const navigate = useNavigate()
 
@@ -24,7 +25,7 @@ function BeveragesList({ beveragesList, addBeveragesToCart }) {
     return (
         <>
         <Navbar />
-        <HeroImg />
+        <HeroImg className='hero-image' img={images[1]} />
         <Container className="beveragesMenu-container" maxWidth="xl">
             <Typography component="h1" variant="h1" sx={{ justifyContent: 'center', textAlign: 'center', margin: '2em', letterSpacing: '8px', fontSize: '42px' }}>
                 BEVERAGES
