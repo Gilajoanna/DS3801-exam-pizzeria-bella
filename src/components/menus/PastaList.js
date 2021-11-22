@@ -58,7 +58,7 @@ function PastaList({pastaList, addPastaToCart}) {
             </Box>
                 <Grid container spacing={3}>
                     {pastaList.map((pasta, index) => {
-                        return <Grid item xs={12} lg={6} key={index}><PastaCard pasta={pasta}/></Grid>
+                        return <Grid item xs={12} lg={6} key={index}><PastaCard addPastaToCart={addPastaToCart} pasta={pasta}/></Grid>
                     })}
                 </Grid>
         </Container>
