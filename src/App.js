@@ -133,7 +133,7 @@ function App() {
       console.log(stateBeverage)
     }, [stateBeverage])
 
-    //Add item to shoppingcart
+    //Add pizza to shoppingcart
     
     const { pizzaList } = statePizza;
     const [shoppingCartItems, setShoppingCartItems] = useState([]);
@@ -148,6 +148,34 @@ function App() {
         );
       } else {
         setShoppingCartItems([...shoppingCartItems, {...pizza, qty: 1 }])
+      }
+    }
+
+    const { pastaList } = statePasta;
+    const addPastaToCart = (pasta) => {
+      const exist = shoppingCartItems.find(x => x.id === pasta.id);
+      if (exist) {
+        setShoppingCartItems(
+          shoppingCartItems.map((x) => 
+            x.id === pasta.id ? {...exist, qty: exist.qty + 1 } : x
+          )
+        );
+      } else {
+        setShoppingCartItems([...shoppingCartItems, {...pasta, qty: 1 }])
+      }
+    }
+
+    const removePizzaItem =(pizza) => {
+      const exist = shoppingCartItems.find((x) => x.id === pizza.id);
+
+      if (exist.qty === 1) {
+        setShoppingCartItems(shoppingCartItems.filter((x) => x.id !== pizza.id));
+      } else {
+        setShoppingCartItems(
+          shoppingCartItems.map((x) =>
+            x.id === pizza.id ? { ...exist, qty: exist.qty -1 } : x
+          )
+        );
       }
     }
 
@@ -172,10 +200,10 @@ function App() {
             <Routes>
               <Route exact path="/" element={ <Home img={ images[0] } /> } />
                 <Route path= "/pizzaList" element={ <PizzaList pizzaList={statePizza} addPizzaToCart={addPizzaToCart}/>}/> 
-                <Route path= "/pastaList" element={ <PastaList pastaList={statePasta}/>}/> 
+                <Route path= "/pastaList" element={ <PastaList pastaList={statePasta} addPastaToCart={addPastaToCart} />}/> 
                 <Route path= "/sideDishesList" element={ <SideDishesList sideDishesList={stateSideDishes} /> } />
                 <Route path= "/beveragesList" element={ <BeveragesList beveragesList={stateBeverage} /> } />
-                <Route path= "/checkOut" element={ <CheckOut addPizzaToCart={addPizzaToCart} shoppingCartItems={shoppingCartItems} /> } />
+                <Route path= "/checkOut" element={ <CheckOut addPastaToCart={addPastaToCart} addPizzaToCart={addPizzaToCart} removePizzaItem={removePizzaItem} shoppingCartItems={shoppingCartItems} /> } />
                 <Route path= "/orderOnline" element={ <OrderOnline /> } />
             </Routes>
         </BrowserRouter>
