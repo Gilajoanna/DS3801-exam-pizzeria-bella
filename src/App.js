@@ -74,7 +74,7 @@ function App() {
       { id:'14', name:"AMERICANO", description:"100% Arabica dark roast", price: 44 }
     ])
 
-    const [stateCheckOut, setStateCheckOut] = useState (() => [])
+  //const [stateCheckOut, setStateCheckOut] = useState (() => [])
 
     useEffect(() => {
       console.log(statePizza)
@@ -182,15 +182,15 @@ function App() {
                 <Route path= "/pizzaList" element={ <PizzaList pizzaList={statePizza} addPizzaToCart={addPizzaToCart}/>}/> 
                 <Route path= "/pastaList" element={ <PastaList pastaList={statePasta} addPastaToCart={addPastaToCart} />}/> 
                 <Route path= "/sideDishesList" element={ <SideDishesList sideDishesList={stateSideDishes} addSideDishesToCart={addSideDishesToCart}/> } />
-                <Route path= "/beveragesList" element={ <BeveragesList beveragesList={stateBeverage} addBeverageToCart={addBeverageToCart} /> } />
-                <Route path= "/checkOut" element={ 
-                    <CheckOut 
-                    addPizzaToCart={addPizzaToCart} 
-                    addPastaToCart={addPastaToCart} 
-                    addSideDishesToCart={addSideDishesToCart} 
-                    addBeverageToCart={addBeverageToCart} 
-                    removePizzaItem={removePizzaItem} 
-                    shoppingCartItems={shoppingCartItems} /> } 
+                <Route path= "/beveragesList" element={ <BeveragesList beveragesList={stateBeverage} addBeverageToCart={addBeverageToCart} img={ images[1] } /> } />
+                <Route path= "/checkOut" 
+                  element={ <CheckOut 
+                      addPizzaToCart={addPizzaToCart} 
+                      addPastaToCart={addPastaToCart} 
+                      addSideDishesToCart={addSideDishesToCart} 
+                      addBeverageToCart={addBeverageToCart} 
+                      removePizzaItem={removePizzaItem} 
+                      shoppingCartItems={shoppingCartItems} /> } 
                     />
                 <Route path= "/orderOnline" element={ <OrderOnline /> } />
             </Routes>

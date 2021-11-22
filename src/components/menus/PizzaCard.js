@@ -1,19 +1,21 @@
 import React from 'react';
-import { Card, CardContent, CardHeader, Typography, Button, Grid} from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+import { Card, CardContent, CardHeader, Typography, Button, Grid, Link} from '@mui/material';
 
 import '../../style2.css';
 
 
-
 export default function PizzaCard({ pizza, addPizzaToCart, props }){
- 
+
+    
     return (
     <main>
         <Grid item lg={12} sx={{flexDirection: 'column'}}>
             <Card className="card">
+                <Grid item xs={12} lg={8}>
                 <CardHeader/>
                     <Button onClick={() => addPizzaToCart(pizza)}
-                        sx={{ justifyContent: 'flex-end', color: '#1D1F2C', letterSpacing: '4px', fontSize: 18, borderColor: '#1D1F2C' }} 
+                        sx={{ justifyContent: 'flex-end', color: '#1D1F2C', backgroundColor: '#FFFFFF', letterSpacing: '4px', fontSize: 18, borderColor: '#1D1F2C' }} 
                         className='add-button' variant="outlined" size="small">ADD
                     </Button>
                 <CardContent>
@@ -31,6 +33,8 @@ export default function PizzaCard({ pizza, addPizzaToCart, props }){
                     </Typography>                
                 </CardContent>
                 <CardHeader/>
+                
+                </Grid>
             </Card>
         </Grid>
     </main>

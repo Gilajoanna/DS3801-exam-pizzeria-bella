@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Box, Container, Typography, Button, Grid } from "@mui/material";
+import { useNavigate } from 'react-router-dom';
 
 import Navbar from '../navbar/Navbar';
 import Footer from '../footer/Footer';
@@ -8,17 +9,12 @@ import Basket from './Basket';
 
 function CheckOut({ addPizzaToCart, addPastaToCart, addSideDishesToCart, addBeverageToCart, removePizzaItem, shoppingCartItems, props }) {
     
-    /*
-    const { pizzaList, onAdd } = props;
-    <div>
-        {pizzaList.map(()=>(
-        <PizzaList key={pizzaList.id} pizzaList={pizzaList} onAdd={onAdd}></PizzaList>
-        ))}
-    </div>
-    */
+    //Navigate to other menus//
+    const navigate = useNavigate()
+    const goToOrderOnline = () =>{ navigate("/orderOnline") }
+    const goToSideDishesMenu = () =>{ navigate("/sideDishesList") }
+    const goToBeveragesMenu = () =>{ navigate("/beveragesList") }
 
-
-    
     return(
         <>
             <Navbar />
@@ -42,13 +38,19 @@ function CheckOut({ addPizzaToCart, addPastaToCart, addSideDishesToCart, addBeve
                             </Grid> 
                             <Grid item xs={12} lg={5}>
                                 <Grid item lg={12}>
-                                    <Button sx={{ backgroundColor: '#1D1F2C', mb: 1, fontSize: 18, width: '20em', color: 'white'  }} variant="text" size="large">ORDER MORE FOOD?</Button>
+                                    <Button onClick ={() => goToOrderOnline()} 
+                                        sx={{ backgroundColor: '#1D1F2C', mb: 1, fontSize: 18, width: '20em', color: 'white'  }} variant="text" size="large">ORDER MORE FOOD?
+                                    </Button>
                                 </Grid>
                                 <Grid item lg={12}>             
-                                    <Button sx={{ backgroundColor: '#1D1F2C', mb: 1, fontSize: 18, width: '20em', color: 'white'  }} variant="text" size="large">WANT ANOTHER SIDE DISH?</Button>
+                                    <Button onClick ={() => goToSideDishesMenu()} 
+                                        sx={{ backgroundColor: '#1D1F2C', mb: 1, fontSize: 18, width: '20em', color: 'white'  }} variant="text" size="large">WANT ANOTHER SIDE DISH?
+                                    </Button>
                                 </Grid>
                                 <Grid item lg={12}>    
-                                    <Button sx={{ backgroundColor: '#1D1F2C', fontSize: 18, width: '20em', color: 'white'  }} variant="text" size="large">FORGOT TO ADD DRINKS?</Button> 
+                                    <Button onClick ={() => goToBeveragesMenu()} 
+                                        sx={{ backgroundColor: '#1D1F2C', fontSize: 18, width: '20em', color: 'white'  }} variant="text" size="large">FORGOT TO ADD DRINKS?
+                                    </Button> 
                                 </Grid>
                             </Grid>     
                         </Grid>

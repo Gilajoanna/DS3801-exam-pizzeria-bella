@@ -29,11 +29,10 @@ export default function OrderOnline (){
         <main className="orderOnline-container">
             <Container >
                 <Grid>
-                    <Typography variant='h1s' x={{ justifyContent: 'center', textAlign: 'center', margin: '2em', letterSpacing: '8px', fontSize: '48px' }}
+                    <Typography variant='h1' sx={{ justifyContent: 'center', textAlign: 'center', alignItem: 'center', margin: '2em', letterSpacing: '8px', fontSize: '48px' }}
                         className='orderOnline-header'>ORDER ONLINE
                     </Typography>
-                </Grid>
-           
+                </Grid>           
                 <Grid item lg={12} sx={{flexDirection: 'column'}}>
                     <Box sx={{ flexDirection: 'column', justifyContent: 'center', textAlign: 'center', margin: '2em' }} item xs={6}>
                         <Button  onClick ={() => goToPizzaMenu()}

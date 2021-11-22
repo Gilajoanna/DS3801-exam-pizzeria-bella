@@ -1,11 +1,10 @@
-
+/*ORDER ONLINE*/
 .orderOnline-container {
     overflow-x: hidden;
     overflow-y: hidden;
     background-color: #F8F6F2;
     position: relative;
 }
-
 
 .orderOnline-header {
     margin-top: 10px;  
@@ -20,14 +19,58 @@
     border-color: #1D1F2C;
 }
 
+.openingHours{
+    height: auto;
+    background-color: #1D1F2C;
+}
+
+/*OPENING HOURS*/
+.opening-hours{
+    font-weight: bold;
+    font-family: Roboto;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    
+}
+
+.mon-thur{
+
+}
+
+.fri-dun{
+    margin-bottom: 15px;
+}
+
+/*PIZZA MENU*/
 .pizzaMenu-container{
     overflow-x: hidden;
     overflow-y: hidden;
     background-color: #F8F6F2;
     position: relative;
     overflow-y: hidden;
+  
+}
+.pizza-text{
+   
 }
 
+
+.pizzaMenu {
+
+}
+
+.hero-image2{
+    height: 100px;
+    width: 100%;
+    object-fit: cover;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    overflow-y: hidden;
+}
+
+
+/*PASTA MENU*/
 .pastaMenu-container{
     overflow-x: hidden;
     overflow-y: hidden;
@@ -36,6 +79,8 @@
     overflow-y: hidden;
 }
 
+
+/*SIDE DISHES MENU*/
 .sideDishesMenu-container{
     overflow-x: hidden;
     overflow-y: hidden;
@@ -44,6 +89,8 @@
     overflow-y: hidden;
 }
 
+
+/*BEVERAGE MENU*/
 .beveragesMenu-container{
     overflow-x: hidden;
     overflow-y: hidden;
@@ -52,15 +99,27 @@
     overflow-y: hidden;
 }
 
+
+/*GLOBAL*/
 .card{
-    background-color: #F8F6F2;
-    display: inline;
+    /*background-color: #F8F6F2;*/
+    display:inline;
+    width: 50%;
+    
+    
   
 }
 
+.textBox-menus{
+    justify-content: center;
+    text-align: center;
+    width: 25%;
+
+}
+
+
 .title{
     
-
 }
 
 .description {
@@ -102,3 +161,13 @@
 body{
     margin: 0;
 }
+
+/*
+.checkout-button{
+    size: medium;
+    justify-content: center;
+    letter-spacing: 4px;
+    background-color:#1D1F2C ;
+    color: #1D1F2C;
+    
+}*/
