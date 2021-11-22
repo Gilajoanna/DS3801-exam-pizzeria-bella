@@ -4,15 +4,14 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
 import images from './images/images';
+import OrderOnline from "./components/OrderOnline";
 import CheckOut from './components/checkout/CheckOut';
 import PizzaList from "./components/menus/PizzaList";
 import PastaList from "./components/menus/PastaList";
 import SideDishesList from './components/menus/SideDishesList';
 import BeveragesList from './components/menus/BeveragesList';
-
 import './style2.css';
 import PizzaCard from "./components/menus/PizzaCard";
-import OrderOnline from "./components/OrderOnline";
 
 
 
@@ -29,21 +28,19 @@ function App() {
       { id:'8', name: "PIZZA PANCHETTA", description: "Tomato sauce, mozzarella, pancetta, red onion, parmesan, oregano", allergens:"WHEAT, MILK", price: 229 },
       { id:'9', name: "CALABRESE", description: "Tomato sauce, mozzarella, Marchisio salami with black truffle, truffle oil, ruccula", allergens:"WHEAT, MILK, SULPHITES", price: 229 },
       { id:'10', name: "INFERNO", description: "Tomato sauce, mozzarella, Negrini salami spicy pepperoni, marinated chili pepper", allergens:"WHEAT, MILK", price: 229 }
-  ])
-
- 
+    ])
 
     const [statePasta, setStatePasta] = useState (() => [
-        { id:'1', name:"RISOTTO ALLA VENTRICINA", description:"Risotto, ventricina salami, tomato, onion, garlic and parmesan", allergens:"MILK, SULPHITES", price: 215},
-        { id:'2', name:"RISOTTO AI FUNGHI PORCINI", description:"Risotto, mushrooms, onions, garlic, white wine, parmesan", allergens:"MILK, SULPHITES", price:215 },
-        { id:'3', name:"SPAGHETTI CONN PICCANTE SALSICCIA", description:"Fresh spaghetti with Salsiccia piccante, tomato sauce, fennel and parmesan", allergens:"WHEAT, DURUM WHEAT, MILK, CELERY", price: 229},
-        { id:'4', name:"SPAGHETTI CON POLPETTE VEGETARIANE", description:"Fresh spaghetti, tomato sauce, veggie buns, basil", allergens:"WHEAT, DURUM WHEAT", price:199},
-        { id:'5', name:"SPAGHETTI AGLIO OLIO E PEPERONCINO", description:"Fresh spaghetti, olive oil, garlic, chilli flakes, parsley and parmesan", allergens:"WHEAT, MILK, CELLERY", price:185 },
-        { id:'6', name:"LASAGNA DELLA CASA", description:"The house lasagne is served with salad and focaccia", allergens:"WHEAT, DURUM WHEAT, EGGS, MILK, CELERY, SULPHITTER", price: 219 },
-        { id:'7', name:"TAGLIATELLE AL BOLOGNAISE", description:"Fresh tagliatelle, meat sauce, parmesan and parsley", allergens:"WHEAT, DURUM WHEAT, EGGS, MILK, CELLERY, SOY, SULPHITES", price: 205 },
-        { id:'8', name:"TAGLIATELLE GORGONZOLA", description:"Fresh tagliatelle with beef tenderloin, spring onions, chili and gorgonzola sauce", allergens:"WHEAT, DURUM WHEAT, EGGS, MILK, SOY, CELLERY", price: 239 },
-        { id:'9', name:"TAGLIATELLE CON PORCINI", description:"Tagliatelle with creamy mushrooms", allergens:"WHEAT, DURUM WHEAT, EGGS, MILK", price: 239 },
-        { id:'10', name:"STROZZAPRETI CON POLLO", description:"Fresh strozzapreti, chicken fillet, bacon, peppers, spring onions, garlic, cream and basil", allergens:"WHEAT, DURUM WHEAT, EGGS, MILK, CELERY, SULPHITES", price: 229 }
+      { id:'1', name:"RISOTTO ALLA VENTRICINA", description:"Risotto, ventricina salami, tomato, onion, garlic and parmesan", allergens:"MILK, SULPHITES", price: 215},
+      { id:'2', name:"RISOTTO AI FUNGHI PORCINI", description:"Risotto, mushrooms, onions, garlic, white wine, parmesan", allergens:"MILK, SULPHITES", price:215 },
+      { id:'3', name:"SPAGHETTI CONN PICCANTE SALSICCIA", description:"Fresh spaghetti with Salsiccia piccante, tomato sauce, fennel and parmesan", allergens:"WHEAT, DURUM WHEAT, MILK, CELERY", price: 229},
+      { id:'4', name:"SPAGHETTI CON POLPETTE VEGETARIANE", description:"Fresh spaghetti, tomato sauce, veggie buns, basil", allergens:"WHEAT, DURUM WHEAT", price:199},
+      { id:'5', name:"SPAGHETTI AGLIO OLIO E PEPERONCINO", description:"Fresh spaghetti, olive oil, garlic, chilli flakes, parsley and parmesan", allergens:"WHEAT, MILK, CELLERY", price:185 },
+      { id:'6', name:"LASAGNA DELLA CASA", description:"The house lasagne is served with salad and focaccia", allergens:"WHEAT, DURUM WHEAT, EGGS, MILK, CELERY, SULPHITTER", price: 219 },
+      { id:'7', name:"TAGLIATELLE AL BOLOGNAISE", description:"Fresh tagliatelle, meat sauce, parmesan and parsley", allergens:"WHEAT, DURUM WHEAT, EGGS, MILK, CELLERY, SOY, SULPHITES", price: 205 },
+      { id:'8', name:"TAGLIATELLE GORGONZOLA", description:"Fresh tagliatelle with beef tenderloin, spring onions, chili and gorgonzola sauce", allergens:"WHEAT, DURUM WHEAT, EGGS, MILK, SOY, CELLERY", price: 239 },
+      { id:'9', name:"TAGLIATELLE CON PORCINI", description:"Tagliatelle with creamy mushrooms", allergens:"WHEAT, DURUM WHEAT, EGGS, MILK", price: 239 },
+      { id:'10', name:"STROZZAPRETI CON POLLO", description:"Fresh strozzapreti, chicken fillet, bacon, peppers, spring onions, garlic, cream and basil", allergens:"WHEAT, DURUM WHEAT, EGGS, MILK, CELERY, SULPHITES", price: 229 }
     ])
 
     const [stateSideDishes, setStateSideDishes] = useState (() => [
@@ -79,42 +76,6 @@ function App() {
 
     const [stateCheckOut, setStateCheckOut] = useState (() => [])
 
-   
-    /* const addPizzaToCart = (name, description, allergens, price) => {
-      setStatePizza(prevState => {
-        return [...prevState, {name, description, allergens, price}]
-      })
-    }
-    */
-
-
-     /*
-
-    const addPastaToCart = (name, description, allergens, price) => {
-      setStatePasta(prevState => {
-        return [...prevState, {name, description, allergens, price}]
-      })
-    }
-
-    const addSideDishesToCart = (name, description, allergens, price) => {
-      setStateSideDishes(prevState => {
-        return [...prevState, {name, description, allergens, price}]
-      })
-    }
-
-    const addBeverageToCart = (name, description, price) => {
-      setStateBeverage(prevState => {
-        return [...prevState, {name, description, price}]
-      })
-    }
-    */
-
-    
-    /*const pizzaItems = (name, description, allergens, price) => {
-      
-    }*/
-
-    
     useEffect(() => {
       console.log(statePizza)
     }, [statePizza])
@@ -133,8 +94,7 @@ function App() {
       console.log(stateBeverage)
     }, [stateBeverage])
 
-    //Add pizza to shoppingcart
-    
+   
     //Add pizza to shoppingcart
     const { pizzaList } = statePizza;
     const [shoppingCartItems, setShoppingCartItems] = useState([]);
@@ -152,6 +112,7 @@ function App() {
       }
     }
 
+    //Add pasta to shoppingcart
     const { pastaList } = statePasta;
     const addPastaToCart = (pasta) => {
       const exist = shoppingCartItems.find(x => x.id === pasta.id);
@@ -165,6 +126,37 @@ function App() {
         setShoppingCartItems([...shoppingCartItems, {...pasta, qty: 1 }])
       }
     }
+
+    //Add side dishes to shoppingcart
+    const { sideDishesList } = stateSideDishes;
+    const addSideDishesToCart = (sideDish) => {
+      const exist = shoppingCartItems.find(x => x.id === sideDish.id);
+      if (exist) {
+        setShoppingCartItems(
+          shoppingCartItems.map((x) => 
+            x.id === sideDish.id ? {...exist, qty: exist.qty + 1 } : x
+          )
+        );
+      } else {
+        setShoppingCartItems([...shoppingCartItems, {...sideDish, qty: 1 }])
+      }
+    }
+
+    //Add beverages to shoppingcart
+    const { beveragesList } = stateBeverage;
+    const addBeverageToCart = (beverage) => {
+      const exist = shoppingCartItems.find(x => x.id === beverage.id);
+      if (exist) {
+        setShoppingCartItems(
+          shoppingCartItems.map((x) => 
+            x.id === beverage.id ? {...exist, qty: exist.qty + 1 } : x
+          )
+        );
+      } else {
+        setShoppingCartItems([...shoppingCartItems, {...beverage, qty: 1 }])
+      }
+    }
+
 
     const removePizzaItem =(pizza) => {
       const exist = shoppingCartItems.find((x) => x.id === pizza.id);
@@ -180,20 +172,7 @@ function App() {
       }
     }
 
-    /*
-    const addPizzaToCart = (pizza) => {
-      const exist = shoppingCartItems.find(x => x.id === pizza.id);
-      if (exist) {
-          setShoppingCartItems(
-              shoppingCartItems.map((x) =>
-                  x.id === pizza.id ? { ...exist, qty: exist.qty + 1 } : x
-              )
-          );
-      } else {
-          setShoppingCartItems([...shoppingCartItems, { ...pizza, qty: 1}]);
-      }
-    };
-    */
+   
     
     return (
       <div className="App">
@@ -202,9 +181,17 @@ function App() {
               <Route exact path="/" element={ <Home img={ images[0] } /> } />
                 <Route path= "/pizzaList" element={ <PizzaList pizzaList={statePizza} addPizzaToCart={addPizzaToCart}/>}/> 
                 <Route path= "/pastaList" element={ <PastaList pastaList={statePasta} addPastaToCart={addPastaToCart} />}/> 
-                <Route path= "/sideDishesList" element={ <SideDishesList sideDishesList={stateSideDishes} /> } />
-                <Route path= "/beveragesList" element={ <BeveragesList beveragesList={stateBeverage} /> } />
-                <Route path= "/checkOut" element={ <CheckOut addPastaToCart={addPastaToCart} addPizzaToCart={addPizzaToCart} removePizzaItem={removePizzaItem} shoppingCartItems={shoppingCartItems} /> } />
+                <Route path= "/sideDishesList" element={ <SideDishesList sideDishesList={stateSideDishes} addSideDishesToCart={addSideDishesToCart}/> } />
+                <Route path= "/beveragesList" element={ <BeveragesList beveragesList={stateBeverage} addBeverageToCart={addBeverageToCart} /> } />
+                <Route path= "/checkOut" element={ 
+                    <CheckOut 
+                    addPizzaToCart={addPizzaToCart} 
+                    addPastaToCart={addPastaToCart} 
+                    addSideDishesToCart={addSideDishesToCart} 
+                    addBeverageToCart={addBeverageToCart} 
+                    removePizzaItem={removePizzaItem} 
+                    shoppingCartItems={shoppingCartItems} /> } 
+                    />
                 <Route path= "/orderOnline" element={ <OrderOnline /> } />
             </Routes>
         </BrowserRouter>

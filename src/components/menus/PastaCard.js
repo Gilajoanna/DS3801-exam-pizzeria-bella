@@ -10,7 +10,8 @@ export default function PastaCard({ pasta, addPastaToCart }){
             <Grid item lg={12} sx={{flexDirection: 'column'}}>
                 <Card className="card">
                     <CardHeader/>
-                            <Button sx={{ justifyContent: 'flex-end', color: '#1D1F2C', letterSpacing: '4px', fontSize: 18, borderColor: '#1D1F2C' }} 
+                            <Button onClick={() => addPastaToCart(pasta)}
+                                sx={{ justifyContent: 'flex-end', color: '#1D1F2C', letterSpacing: '4px', fontSize: 18, borderColor: '#1D1F2C' }} 
                                 className='add-button' variant="outlined" size="small">ADD
                             </Button>
                         <CardContent>

@@ -29,8 +29,8 @@ export default function OrderOnline (){
         <main className="orderOnline-container">
             <Container >
                 <Grid>
-                    <Typography sx={{ justifyContent: 'center', textAlign: 'center', margin: '2em', letterSpacing: '8px', fontSize: '48px' }}>
-                        <h1 className="orderOnline-header">ORDER ONLINE</h1>
+                    <Typography variant='h1s' x={{ justifyContent: 'center', textAlign: 'center', margin: '2em', letterSpacing: '8px', fontSize: '48px' }}
+                        className='orderOnline-header'>ORDER ONLINE
                     </Typography>
                 </Grid>
            

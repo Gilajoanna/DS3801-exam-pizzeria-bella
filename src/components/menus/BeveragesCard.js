@@ -1,16 +1,17 @@
 import React from 'react';
-import { Card, CardContent, CardHeader, Typography } from '@mui/material';
-import Button from '@mui/material/Button';
+import { Card, CardContent, CardHeader, Typography, Button, Grid } from '@mui/material';
 
-
+import '../../style2.css';
 
 export default function BeveragesCard({ beverage, addBeverageToCart }){
 
     return (
     <main>
-        <Card className="card">
-            <CardHeader/>
-                    <Button sx={{ justifyContent: 'flex-end', color: '#1D1F2C', letterSpacing: '4px', fontSize: 18, borderColor: '#1D1F2C' }} 
+        <Grid item lg={12} sx={{flexDirection: 'column'}}>
+            <Card className="card">
+                <CardHeader/>
+                    <Button onClick={() => addBeverageToCart(beverage)}
+                        sx={{ justifyContent: 'flex-end', color: '#1D1F2C', letterSpacing: '4px', fontSize: 18, borderColor: '#1D1F2C' }} 
                         className='add-button' variant="outlined" size="small">ADD
                     </Button>
                 <CardContent>
@@ -24,8 +25,9 @@ export default function BeveragesCard({ beverage, addBeverageToCart }){
                         { beverage.price }
                     </Typography>
                 </CardContent>
-            <CardHeader/>
-        </Card>
+                <CardHeader/>
+            </Card>
+        </Grid>
     </main>
     )
 }

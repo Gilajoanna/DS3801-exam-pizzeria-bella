@@ -6,7 +6,7 @@ import Footer from '../footer/Footer';
 import Basket from './Basket';
 
 
-function CheckOut({ addPastaToCart, addPizzaToCart, removePizzaItem, shoppingCartItems, props }) {
+function CheckOut({ addPizzaToCart, addPastaToCart, addSideDishesToCart, addBeverageToCart, removePizzaItem, shoppingCartItems, props }) {
     
     /*
     const { pizzaList, onAdd } = props;
@@ -30,7 +30,14 @@ function CheckOut({ addPastaToCart, addPizzaToCart, removePizzaItem, shoppingCar
                                 <Typography component="h1" variant="h6" sx={{ letterSpacing: '4px' }}>
                                     YOUR ORDER
                                 </Typography>
-                                <Basket addPizzaToCart={addPizzaToCart} addPastaToCart={addPastaToCart} removePizzaItem={removePizzaItem} shoppingCartItems={shoppingCartItems} />
+                                <Basket 
+                                    addPizzaToCart={addPizzaToCart}
+                                    addPastaToCart={addPastaToCart} 
+                                    addSideDishesToCart={addSideDishesToCart}
+                                    addBeverageToCart={addBeverageToCart} 
+                                    removePizzaItem={removePizzaItem} 
+                                    shoppingCartItems={shoppingCartItems} 
+                                    />
                                 <Button sx={{ backgroundColor: '#1D1F2C', mt: 2, fontSize: 18, width: '15em', color: 'white' }} variant="text">GO TO PAYMENT</Button>
                             </Grid> 
                             <Grid item xs={12} lg={5}>

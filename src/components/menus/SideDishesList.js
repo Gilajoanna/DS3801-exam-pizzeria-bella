@@ -52,7 +52,7 @@ function SideDishesList({ sideDishesList, addSideDishesToCart }) {
             </Box>
                 <Grid container spacing={3}>
                     {sideDishesList.map((sideDish, index) => {
-                        return <Grid item xs={12} lg={6} key={index}><SideDishesCard sideDish={sideDish}/></Grid>
+                        return <Grid item xs={12} lg={6} key={index}><SideDishesCard addSideDishesToCart={addSideDishesToCart} sideDish={sideDish}/></Grid>
                     })}
                 </Grid>
         </Container>

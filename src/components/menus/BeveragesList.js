@@ -7,7 +7,7 @@ import HeroImg from '../HeroImg';
 import images from '../../images/images';
 import Footer from '../footer/Footer';
 
-function BeveragesList({ beveragesList, addBeveragesToCart, props }) {
+function BeveragesList({ beveragesList, addBeverageToCart, props }) {
    
     const navigate = useNavigate()
 
@@ -52,7 +52,7 @@ function BeveragesList({ beveragesList, addBeveragesToCart, props }) {
 
             <Grid container spacing={3}>
                     {beveragesList.map((beverage, index) => {
-                        return <Grid item xs={12} lg={6} key={index}><BeveragesCard beverage={beverage}/></Grid>
+                        return <Grid item xs={12} lg={6} key={index}><BeveragesCard addBeverageToCart={addBeverageToCart} beverage={beverage}/></Grid>
                     })}
             </Grid>
         </Container>
