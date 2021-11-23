@@ -6,7 +6,7 @@ import { Container, Box, TextField, Grid, Typography, Button, Modal } from '@mui
 import Navbar from '../navbar/Navbar';
 import Footer from '../footer/Footer';
 
-function Payment() {
+function Payment({itemsPrice}) {
 
     const style = {
         position: 'absolute',
@@ -19,8 +19,6 @@ function Payment() {
         boxShadow: 24,
         p: 4,
       };
-
-    const navigate = useNavigate();
 
     const [name, setName] = useState('');
     const [address, setAdress] = useState('')
@@ -104,6 +102,7 @@ function Payment() {
                                         required
                                         error={phoneError} />
                                     </Grid>
+                                    <Button type="submit" className="submit-button" sx={{ alignContent: 'right', backgroundColor: '#1D1F2C', color: 'white', width: '15em', letterSpacing: 2 }} variant="text" size="large">SUBMIT INFORMATION</Button>
                                 </Grid>
 
                                 <Grid item xs={12} md={8} lg={5}>
@@ -141,28 +140,29 @@ function Payment() {
                                         required 
                                         error={cvcError}/>
                                     </Grid>
-                                <Button type="submit" /*onClick={() => navigate(-1)}*/ onClick={handleOpen} sx={{ alignContent: 'right', backgroundColor: '#1D1F2C', color: 'white', width: '10em', letterSpacing: 2 }} variant="text" size="large">PLACE ORDER</Button>
                             </Grid>
                             </Grid> 
-                        
-                            <Modal
-                                open={open}
-                                onClose={handleClose}
-                                aria-labelledby="modal-modal-title"
-                                aria-describedby="modal-modal-description"
-                                >
-                                <Box sx={style}>
-                                    <Typography id="modal-modal-title" variant="h6" component="h2">
-                                    Thank you for your order!
-                                    </Typography>
-                                    <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                                    It will be ready for pick-up in 20 minutes
-                                    </Typography>
-                                </Box>
-                            </Modal>
                         </form>
                     </Box>
+                    <Box sx={{justifyContent: 'center', alignContent: 'center',  alignItems: 'center', flexDirection: 'row', display: 'flex', mb: 5}}>
+                    <Button type="submit" className="submit-button"  onClick={handleOpen} sx={{ backgroundColor: '#1D1F2C', color: 'white', width: '20em', letterSpacing: 2 }} variant="text" size="large">PURCHASE</Button>
+                    </Box>
                 </Container>
+                <Modal
+                    open={open}
+                    onClose={handleClose}
+                    aria-labelledby="modal-modal-title"
+                    aria-describedby="modal-modal-description"
+                    >
+                    <Box sx={style}>
+                    <Typography id="modal-modal-title" variant="h6" component="h2">
+                    Thank you for your order!
+                    </Typography>
+                    <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                    It will be ready for pick-up in 20 minutes
+                    </Typography>
+                    </Box>
+                </Modal>
             </main>
         <Footer /> 
        </>

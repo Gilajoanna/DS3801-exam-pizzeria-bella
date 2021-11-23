@@ -39,7 +39,6 @@ function CheckOut({ addPizzaToCart, addPastaToCart, addSideDishesToCart, addBeve
                                     removeItem={removeItem} 
                                     shoppingCartItems={shoppingCartItems} 
                                     />
-                                <Button component={ Link } to="/payment" sx={{ backgroundColor: '#1D1F2C', mt: 2, fontSize: 18, width: '15em', color: 'white', letterSpacing: '4px' }} variant="text">GO TO PAYMENT</Button>
                             </Grid> 
                             <Grid item xs={12} lg={5}>
                                 <Grid item lg={12}>
