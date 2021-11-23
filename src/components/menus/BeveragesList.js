@@ -25,7 +25,7 @@ function BeveragesList({ beveragesList, addBeverageToCart, props }) {
         <body>
         <header>
             <Navbar />
-            <HeroImg />
+            <HeroImg className='hero-image' img={images[3]}/>
         </header>
         <main>
             <Container className="beveragesMenu-container" maxWidth="xl">
