@@ -5,6 +5,7 @@ import { Container, Box, TextField, Grid, Typography, Button, Modal } from '@mui
 
 import Navbar from '../navbar/Navbar';
 import Footer from '../footer/Footer';
+import { TryRounded } from '@mui/icons-material';
 
 function Payment({itemsPrice}) {
 
@@ -49,11 +50,11 @@ function Payment({itemsPrice}) {
             setPhoneError(false)
             setCardError(false)
             setExDateError(false)
-            setCvcError(false)
-
+            setCvcError(false) 
+        } 
     }
-}
 
+   
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false); 
@@ -85,7 +86,7 @@ function Payment({itemsPrice}) {
                                         <TextField
                                         onChange={(e) => setAdress(e.target.value)}
                                         fullWidth
-                                        style={{ marginBottom: 10, color: '#1D1F2C' }}
+                                        style={{ marginBottom: 20, color: '#1D1F2C' }}
                                         label="Address"
                                         variant="outlined"
                                         required 
@@ -102,7 +103,16 @@ function Payment({itemsPrice}) {
                                         required
                                         error={phoneError} />
                                     </Grid>
-                                    <Button type="submit" className="submit-button" sx={{ alignContent: 'right', backgroundColor: '#1D1F2C', color: 'white', width: '15em', letterSpacing: 2 }} variant="text" size="large">SUBMIT INFORMATION</Button>
+                                    
+
+                                    
+                                    <Button disabled={!name || !address || !phone || !card || !exDate || !cvc} type="submit" className="submit-button"  onClick={handleOpen} 
+                                            sx={{backgroundColor: '#1D1F2C', fontSize: 18, width: '18em', height: '3em', color: 'white', letterSpacing: '4px', mt: '2em', mb:'2em' }} 
+                                            variant="text" size="medium"> PURCHASE
+                                    </Button>
+                              
+                                
+                                
                                 </Grid>
 
                                 <Grid item xs={12} md={8} lg={5}>
@@ -123,7 +133,7 @@ function Payment({itemsPrice}) {
                                         <TextField
                                         onChange={(e) => setExDate(e.target.value)}
                                         fullWidth
-                                        style={{ marginBottom: 10, color: '#1D1F2C' }}
+                                        style={{ marginBottom: 20, color: '#1D1F2C' }}
                                         label="Expiration date"
                                         variant="outlined"
                                         required 
@@ -144,9 +154,7 @@ function Payment({itemsPrice}) {
                             </Grid> 
                         </form>
                     </Box>
-                    <Box sx={{justifyContent: 'center', alignContent: 'center',  alignItems: 'center', flexDirection: 'row', display: 'flex', mb: 5}}>
-                    <Button type="submit" className="submit-button"  onClick={handleOpen} sx={{ backgroundColor: '#1D1F2C', color: 'white', width: '20em', letterSpacing: 2 }} variant="text" size="large">PURCHASE</Button>
-                    </Box>
+                   
                 </Container>
                 <Modal
                     open={open}
