@@ -42,18 +42,18 @@ function CheckOut({ addPizzaToCart, addPastaToCart, addSideDishesToCart, addBeve
                             </Grid> 
                             <Grid item xs={12} lg={5}>
                                 <Grid item lg={12}>
-                                    <Button onClick ={() => goToOrderOnline()} 
-                                        sx={{ backgroundColor: '#1D1F2C', mb: 1, fontSize: 18, width: '20em', color: 'white', letterSpacing: '4px'  }} variant="text" size="large">ORDER MORE FOOD?
+                                    <Button className="check-out-button" onClick ={() => goToOrderOnline()} 
+                                        sx={{ backgroundColor: '#1D1F2C', mb: 1, color: 'white', letterSpacing: '4px'  }} variant="text" size="large">ORDER MORE FOOD?
                                     </Button>
                                 </Grid>
                                 <Grid item lg={12}>             
-                                    <Button onClick ={() => goToSideDishesMenu()} 
-                                        sx={{ backgroundColor: '#1D1F2C', mb: 1, fontSize: 18, width: '20em', color: 'white', letterSpacing: '4px'  }} variant="text" size="large">WANT ANOTHER SIDE DISH?
+                                    <Button className="check-out-button" onClick ={() => goToSideDishesMenu()} 
+                                        sx={{ backgroundColor: '#1D1F2C', mb: 1, color: 'white', letterSpacing: '4px'  }} variant="text" size="large">ANOTHER SIDE DISH?
                                     </Button>
                                 </Grid>
                                 <Grid item lg={12}>    
-                                    <Button onClick ={() => goToBeveragesMenu()} 
-                                    sx={{ backgroundColor: '#1D1F2C', fontSize: 18, width: '20em', color: 'white', letterSpacing: '4px'  }} variant="text" size="large">FORGOT TO ADD DRINKS?
+                                    <Button className="check-out-button" onClick ={() => goToBeveragesMenu()} 
+                                    sx={{ backgroundColor: '#1D1F2C', color: 'white', letterSpacing: '4px'  }} variant="text" size="large">FORGOT TO ADD DRINKS?
                                     </Button> 
                                 </Grid>
                             </Grid>     

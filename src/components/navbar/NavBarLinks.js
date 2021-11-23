@@ -1,4 +1,4 @@
-import { Toolbar, Typography, IconButton, Grid } from "@mui/material";
+import { Toolbar, IconButton } from "@mui/material";
 import Button from '@mui/material/Button';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { Link } from 'react-router-dom';

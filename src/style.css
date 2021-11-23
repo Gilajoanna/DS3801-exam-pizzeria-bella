@@ -48,6 +48,11 @@ a:visited {
     overflow-y: hidden;
 }
 
+.check-out-button {
+    width: 20em;
+    font-size: 18;
+}
+
 @media (max-width: 1010px) {
     .nav-bar {
         display: none;
@@ -71,5 +76,24 @@ a:visited {
         flex-direction: column;
         top: 200px;
         right: 0;
+    }
+    .check-out-button {
+        margin: 0;
+        padding: 0;
+        width: 10em;
+        font-size: 14px;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 375px) {
+    .check-out-button {
+        margin: 0;
+        padding: 0;
+        width: 10em;
+        font-size: 14px;
+        justify-content: center;
+        text-align: center;
     }
 }
