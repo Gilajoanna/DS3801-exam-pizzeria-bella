@@ -47,6 +47,11 @@ a:visited {
     padding: 0;
     overflow-y: hidden;
 }
+.submit-button:disabled{
+    background-color: lightgray;
+    border: 0.5px solid black;
+   
+}
 
 @media (max-width: 1010px) {
     .nav-bar {
