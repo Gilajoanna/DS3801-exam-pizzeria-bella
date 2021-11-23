@@ -1,9 +1,9 @@
 import { Button, Grid } from '@mui/material';
 import React from 'react';
 
-function Basket({ shoppingCartItems, removePizzaItem }) {
+function Basket({ shoppingCartItems, removeItem }) {
 
-    const itemsPrice = shoppingCartItems.reduce((a, c) => a + c.price * c.qty, 0);
+    const itemsPrice = shoppingCartItems.reduce((a, b) => a + b.price * b.qty, 0);
 
     return(
         <div>
@@ -15,7 +15,7 @@ function Basket({ shoppingCartItems, removePizzaItem }) {
                     </Grid>
                     <Grid item xs={4} lg={4}>
                         {item.qty} x {item.price}kr
-                        <Button onClick={() => removePizzaItem(item)} className="remove-item" sx={{ ml: 10, color: 'black' }}>
+                        <Button onClick={() => removeItem(item)} className="remove-item" sx={{ ml: 10, color: 'black' }}>
                                 remove
                         </Button></Grid>
                 </Grid>

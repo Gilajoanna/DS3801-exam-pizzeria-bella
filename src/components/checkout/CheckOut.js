@@ -11,7 +11,7 @@ import Footer from '../footer/Footer';
 import Basket from './Basket';
 
 
-function CheckOut({ addPizzaToCart, addPastaToCart, addSideDishesToCart, addBeverageToCart, removePizzaItem, shoppingCartItems, props }) {
+function CheckOut({ addPizzaToCart, addPastaToCart, addSideDishesToCart, addBeverageToCart, removeItem, shoppingCartItems, props }) {
     
     //Navigate to other menus//
     const navigate = useNavigate()
@@ -35,7 +35,7 @@ function CheckOut({ addPizzaToCart, addPastaToCart, addSideDishesToCart, addBeve
                                     addPastaToCart={addPastaToCart} 
                                     addSideDishesToCart={addSideDishesToCart}
                                     addBeverageToCart={addBeverageToCart} 
-                                    removePizzaItem={removePizzaItem} 
+                                    removeItem={removeItem} 
                                     shoppingCartItems={shoppingCartItems} 
                                     />
                                 <Button sx={{ backgroundColor: '#1D1F2C', mt: 2, fontSize: 18, width: '15em', color: 'white' }} variant="text">GO TO PAYMENT</Button>
