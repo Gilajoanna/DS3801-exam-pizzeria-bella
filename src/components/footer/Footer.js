@@ -9,7 +9,7 @@ function Footer() {
                     <Grid container spacing={35}>
                         <Grid item xs={12} md={9} lg={6}>
                             <Typography component="h1" variant="h6" sx={{ letterSpacing: '4px' }}>
-                                ABOUT US:
+                            <a id="about-us">ABOUT US:</a>
                                 <Typography>
                                 No one is as proud of their food as the Italians. 
                                 Food and wine are associated with being together, with family and friends. 
@@ -43,7 +43,7 @@ function Footer() {
                             <Box sx={{ borderRadius: 1, border: 1, borderColor: '#1D1F2C', padding: 5, width: '20em' }}>
                                 <form noValidate autoComplete='off'>
                                     <Typography component="h1" variant="h6" sx={{ letterSpacing: '4px', mb: 1 }}>
-                                    CONTACT US:
+                                    <a id="contact-us">CONTACT US:</a>
                                     </Typography>
                                     <Grid item lg={12}>
                                         <TextField

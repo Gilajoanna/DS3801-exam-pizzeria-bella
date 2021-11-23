@@ -8,6 +8,16 @@
     object-fit: cover;
 }
 
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
 .nav-header {
     height: auto;
     font-family: Roboto;
