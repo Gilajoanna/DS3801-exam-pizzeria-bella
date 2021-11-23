@@ -141,7 +141,7 @@ function Payment() {
                                         required 
                                         error={cvcError}/>
                                     </Grid>
-                                <Button type="submit" onClick={() => navigate(-1)} sx={{ alignContent: 'right', backgroundColor: '#1D1F2C', color: 'white', width: '10em', letterSpacing: 2 }} variant="text" size="large">PLACE ORDER</Button>
+                                <Button type="submit" /*onClick={() => navigate(-1)}*/ onClick={handleOpen} sx={{ alignContent: 'right', backgroundColor: '#1D1F2C', color: 'white', width: '10em', letterSpacing: 2 }} variant="text" size="large">PLACE ORDER</Button>
                             </Grid>
                             </Grid> 
                         
