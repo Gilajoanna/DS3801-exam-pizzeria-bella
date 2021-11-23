@@ -31,6 +31,13 @@
     overflow-y: hidden;
 }
 
+.payment-container {
+    background-color: #F8F6F2;
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+}
+
 @media (max-width: 1010px) {
     .nav-bar {
         display: none;

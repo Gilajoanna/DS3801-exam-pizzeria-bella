@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import images from './images/images';
 import OrderOnline from "./components/OrderOnline";
 import CheckOut from './components/checkout/CheckOut';
+import Payment from './components/checkout/Payment';
 import PizzaList from "./components/menus/PizzaList";
 import PastaList from "./components/menus/PastaList";
 import SideDishesList from './components/menus/SideDishesList';
@@ -189,6 +190,7 @@ function App() {
                       shoppingCartItems={shoppingCartItems} /> } 
                     />
                 <Route path= "/orderOnline" element={ <OrderOnline /> } />
+                <Route path= "/payment" element={ <Payment /> } />
             </Routes>
         </BrowserRouter>
       </div>

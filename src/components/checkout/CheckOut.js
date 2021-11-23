@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Box, Container, Typography, Button, Grid } from "@mui/material";
+import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -38,7 +39,7 @@ function CheckOut({ addPizzaToCart, addPastaToCart, addSideDishesToCart, addBeve
                                     removeItem={removeItem} 
                                     shoppingCartItems={shoppingCartItems} 
                                     />
-                                <Button sx={{ backgroundColor: '#1D1F2C', mt: 2, fontSize: 18, width: '15em', color: 'white', letterSpacing: '4px' }} variant="text">GO TO PAYMENT</Button>
+                                <Button component={ Link } to="/payment" sx={{ backgroundColor: '#1D1F2C', mt: 2, fontSize: 18, width: '15em', color: 'white', letterSpacing: '4px' }} variant="text">GO TO PAYMENT</Button>
                             </Grid> 
                             <Grid item xs={12} lg={5}>
                                 <Grid item lg={12}>
