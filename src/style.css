@@ -47,11 +47,6 @@ a:visited {
     padding: 0;
     overflow-y: hidden;
 }
-.submit-button:disabled{
-    background-color: lightgray;
-    border: 0.5px solid black;
-   
-}
 
 .check-out-button {
     width: 20em;
@@ -82,7 +77,7 @@ a:visited {
         top: 200px;
         right: 0;
     }
-    .check-out-button {
+        .check-out-button {
         margin: 0;
         padding: 0;
         width: 10em;
