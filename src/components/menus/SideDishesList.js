@@ -27,32 +27,34 @@ function SideDishesList({ sideDishesList, addSideDishesToCart }) {
             </head>
             <body>
                 <Container className="sideDishesMenu-container" maxWidth="xl"> 
-
-                 <Typography component="h1" variant="h1" sx={{ justifyContent: 'center', textAlign: 'center', margin: '2em', letterSpacing: '8px', fontSize: '42px' }}>
-                    SIDE DISHES
+                <Typography className="pizzaMenu-header" component="h1" variant="h2" color="text.secondary" 
+                            sx={{ fontWeight: '700', justifyContent:'center', letterSpacing: '8px', mt: '2em', mb: '1em' }}>
+                            SIDE DISHES
                 </Typography>
-                <Box className="textBox-menus" >
-                    <Typography component="h3" variant="h3" sx={{ alignItems: 'center', display: 'flex', justifyContent: 'center', textAlign: 'center', margin: '2em', letterSpacing: '2px', fontSize: '14px' }}>
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                <Box className="pizzaMenu-text" sx={{ fontWeight: '700', justifyContent:'center' }}>
+                    <Typography component="h2" variant="body2" color="text.secondary" sx={{ fontWeight: '700', justifyContent:'center', mt: '2em', mb: '5em' }}> 
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
+                                took a galley of type and scrambledit to make a type specimen book.
                     </Typography>
                 </Box>
-                <Box sx={{ justifyContent: 'center', justifyContent:"space-between", textAlign: 'center', margin: '2em' }} item xs={6}>
+                <Box sx={{ justifyContent: 'center', justifyContent:"space-between", textAlign: 'center', mb: '5em' }} item xs={6}>
                     <Button style ={{ backgroundColor: '#FFFFFF', color: '#1D1F2C', letterSpacing: '4px', fontSize: 24, borderColor: '#1D1F2C', variant:"outlined"}} 
-                        onClick ={() => goToPizzaMenu()} 
-                        className='toNextMenu-button' variant="outlined">PIZZA 
+                            onClick ={() => goToPizzaMenu()} 
+                            className='toNextMenu-button' variant="outlined">PIZZA 
                     </Button>
 
                     <Button style ={{ backgroundColor: '#FFFFFF', color: '#1D1F2C', letterSpacing: '4px', fontSize: 24, borderColor: '#1D1F2C', variant:"outlined", marginLeft: '10px', marginRight: '10px'}} 
-                        onClick ={() => goToPastaMenu()}
-                        className='toNextMenu-button' variant="outlined">PASTA 
+                            onClick ={() => goToPastaMenu()}
+                            className='toNextMenu-button' variant="outlined">PASTA 
                     </Button>
 
                     <Button style ={{ backgroundColor: '#FFFFFF', color: '#1D1F2C', letterSpacing: '4px', fontSize: 24, borderColor: '#1D1F2C', variant:"outlined"}} 
-                        onClick ={() => goToBeveragesMenu()}
-                        className='toNextMenu-button' variant="outlined">BEVERAGE
+                            onClick ={() => goToBeveragesMenu()}
+                            className='toNextMenu-button' variant="outlined">BEVERAGE
                     </Button>
                 </Box>
-                <Grid container spacing={3}>
+
+                <Grid container spacing={1}>
                     {sideDishesList.map((sideDish, index) => {
                         return <Grid item xs={12} lg={6} key={index}><SideDishesCard addSideDishesToCart={addSideDishesToCart} sideDish={sideDish}/></Grid>
                     })}
@@ -60,15 +62,8 @@ function SideDishesList({ sideDishesList, addSideDishesToCart }) {
                
                 <Box sx={{ justifyContent: 'center', alignContent: 'center',  alignItems: 'center', flexDirection: 'row', display: 'flex' }}>
                     <Button onClick ={() => goToCheckOut()} 
-                        sx={{ backgroundColor: '#1D1F2C', mb: '5em', 
-                            fontSize: 18,
-                            width: '18em',
-                            height: '3em',
-                            color: 'white',
-                            letterSpacing: '4px' 
-                            }} 
-                            variant="text" size="medium">
-                            CHECKOUT
+                            sx={{ backgroundColor: '#1D1F2C', fontSize: 18, width: '18em', height: '3em', color: 'white', letterSpacing: '4px', mt: '5em', mb:'5em' }} 
+                            variant="text" size="medium"> CHECKOUT
                     </Button>
                 </Box>
                 </Container>

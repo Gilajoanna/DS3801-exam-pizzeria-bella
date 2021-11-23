@@ -8,7 +8,7 @@ export default function BeveragesCard({ beverage, addBeverageToCart }){
     return (
     <main>
         <Grid item lg={12} sx={{flexDirection: 'column'}}>
-            <Card className="card">
+            <Card className="card" sx={{ fontsize: 16,  bacgroundColor: '#1D1F2C'}} color="text.secondary" bacgroundColor="'#1D1F2C'" gutterBottom> 
             <Grid item xs={12} lg={8}>
                 <CardHeader/>
                     <Button onClick={() => addBeverageToCart(beverage)}

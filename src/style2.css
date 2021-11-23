@@ -55,9 +55,31 @@
 }
 
 
-.pizzaMenu {
+.pizza-menu {
+    background-color:#F8F6F2;
 
 }
+
+.pizzaMenu-header{
+    text-align: center;
+    justify-content: center;
+    color: blue;
+    font-size: 42px;
+    font-family: Roboto, sans-serif, 700;
+    font-weight: 700;
+    margin: auto;
+    
+    letter-spacing: 8px;
+}
+
+.pizzaMenu-text{
+    text-align: center;
+    justify-content: center;
+    color: blue;
+    font-size: 42px;
+    font-family: Roboto, sans-serif;
+}
+
 
 .hero-image2{
     height: 100px;
@@ -77,6 +99,26 @@
     background-color: #F8F6F2;
     position: relative;
     overflow-y: hidden;
+}
+
+.pastaMenu-header{
+    text-align: center;
+    justify-content: center;
+    color: blue;
+    font-size: 42px;
+    font-family: Roboto, sans-serif, 700;
+    font-weight: 700;
+    margin: auto;
+    
+    letter-spacing: 8px;
+}
+
+.pastaMenu-text{
+    text-align: center;
+    justify-content: center;
+    color: blue;
+    font-size: 42px;
+    font-family: Roboto, sans-serif;
 }
 
 
@@ -101,21 +143,34 @@
 
 
 /*GLOBAL*/
-.card{
-    /*background-color: #F8F6F2;*/
+.card {
+    background-color: #F8F6F2;
     display:inline;
-    width: 50%;
-    
-    
-  
+   
 }
 
 .textBox-menus{
     justify-content: center;
     text-align: center;
     width: 25%;
-
 }
+
+
+.MuiCard-root{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.MuiCard-root{
+    display: flex;
+    flex-direction: column;
+}
+
+.MuiCardActions-root{
+    margin-top: auto;
+}
+*/ 
 
 
 .title{
@@ -137,10 +192,8 @@
 .toNextMenu-button{
     width: 9em;
     height: 2em;
-    border: solid;
     border-color: #1D1F2C, solid;
     font-weight: 500;
-
 }
 
 .add-button{

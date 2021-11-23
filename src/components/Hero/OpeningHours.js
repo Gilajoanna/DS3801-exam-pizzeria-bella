@@ -8,7 +8,7 @@ export default function OpeningHours() {
             <Container maxWidth="xl">
                 <Grid container spacing={3}>
                     <Grid item xs={12}>
-                        <Box sx={{ flexDirection: 'column', justifyContent: 'center', alignItems:'center', textAlign: 'center', margin: '2em', color: '#FFFFFF' }} item xs={6}>
+                        <Box sx={{ flexDirection: 'column', justifyContent: 'center', alignItems:'center', textAlign: 'center', mt: '8em', mb: '8em', color: '#FFFFFF' }} item xs={6}>
                             <Typography className= "opening-hours" component="h1" variant="h4" sx={{ flexDirection: 'column', letterSpacing: '4px', color: '#FFFFFF', justifyContent: 'center', textAlign: 'center', m:'40px' }}>
                                 OPENING HOURS
                             </Typography>

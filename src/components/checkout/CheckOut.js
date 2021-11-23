@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { Box, Container, Typography, Button, Grid } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 
 import Navbar from '../navbar/Navbar';
 import Footer from '../footer/Footer';
@@ -23,7 +27,7 @@ function CheckOut({ addPizzaToCart, addPastaToCart, addSideDishesToCart, addBeve
                     <Box className="order-container" sx={{ backgroundColor: '#FFFFFF', borderRadius: 1, m: 10, border: 1, borderColor: '#A3A29E', padding: 5 }}>
                         <Grid container spacing={4}>
                             <Grid item xs={12} lg={7}>
-                                <Typography component="h1" variant="h6" sx={{ letterSpacing: '4px' }}>
+                                <Typography component="h1" variant="h6" color="text.secondary" sx={{ letterSpacing: '4px', fontFamily: 'Roboto' }}>
                                     YOUR ORDER
                                 </Typography>
                                 <Basket 
@@ -49,7 +53,7 @@ function CheckOut({ addPizzaToCart, addPastaToCart, addSideDishesToCart, addBeve
                                 </Grid>
                                 <Grid item lg={12}>    
                                     <Button onClick ={() => goToBeveragesMenu()} 
-                                        sx={{ backgroundColor: '#1D1F2C', fontSize: 18, width: '20em', color: 'white'  }} variant="text" size="large">FORGOT TO ADD DRINKS?
+                                    sx={{ backgroundColor: '#1D1F2C', fontSize: 18, width: '20em', color: 'white'  }} variant="text" size="large">FORGOT TO ADD DRINKS?
                                     </Button> 
                                 </Grid>
                             </Grid>     
