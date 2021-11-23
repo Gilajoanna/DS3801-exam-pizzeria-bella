@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 import '../../style.css';
 import '../../style2.css';
 
-function MobileNavigation() {
+function MobileNavigation({ shoppingCartItems }) {
 
     const [ clickedNav, setClickedNav ] = useState(false);
 

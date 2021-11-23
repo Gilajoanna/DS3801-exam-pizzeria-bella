@@ -11,7 +11,8 @@ import '@fontsource/roboto/700.css';
 import '../../style.css';
 import '../../style2.css';
 
-function NavBarLinks() {
+function NavBarLinks({ shoppingCartItems }) {
+
     return(
             <Toolbar className="nav-content-container" sx={{ mt: 5, mb: 4 , justifyContent: 'right'}}>
                 <Button sx={{ justifyContent: 'flex-end', underline: 'hover', color: '#1D1F2C', letterSpacing: '4px', fontSize: 20 }} 
@@ -27,7 +28,7 @@ function NavBarLinks() {
                 </Button>
 
                 <IconButton component={ Link } to="/checkOut" color='primary' aria-label='shopping cart'>
-                     <AddShoppingCartIcon className='shopping-cart' sx={{ justifyContent: 'flex-end', color: '#1D1F2C', letterSpacing: '4px', fontSize: 45 }} />
+                          <AddShoppingCartIcon className='shopping-cart' sx={{ justifyContent: 'flex-end', color: '#1D1F2C', letterSpacing: '4px', fontSize: 45 }} />
                 </IconButton>
             </Toolbar>
     );

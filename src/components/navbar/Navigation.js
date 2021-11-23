@@ -7,7 +7,7 @@ import NavBarLinks from './NavBarLinks';
 import '../../style.css';
 import '../../style2.css';
 
-function Navigation () {
+function Navigation({ shoppingCartItems }) {
 
     const theme = createTheme();
         theme.typography.h3 = {

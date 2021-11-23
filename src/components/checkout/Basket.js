@@ -1,4 +1,5 @@
 import { Button, Grid, Typography } from '@mui/material';
+import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
 import React from 'react';
 
 function Basket({ shoppingCartItems, removeItem }) {
@@ -17,7 +18,7 @@ function Basket({ shoppingCartItems, removeItem }) {
                         <Grid item xs={4} lg={8}>
                             {item.qty} x {item.price}kr
                             <Button sx={{ }} onClick={() => removeItem(item)} className="remove-item" sx={{ ml: 10, color: 'black' }}>
-                                    remove
+                                <RemoveShoppingCartIcon aria-label="remove item from cart" sx={{ justifyContent: 'flex-end', color: '#1D1F2C', fontSize: 24 }} />
                             </Button>
                         </Grid>
                     </Typography>

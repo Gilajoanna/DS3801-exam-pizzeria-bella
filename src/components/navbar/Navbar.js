@@ -12,7 +12,7 @@ import MobileNavigation from './MobileNavigation';
 import '../../style.css';
 import '../../style2.css';
 
-function Navbar() {
+function Navbar({ shoppingCartItems }) {
     return (
         <Container className='nav-container' maxWidth='xl'>
             <Navigation />

@@ -10,7 +10,7 @@ import Footer from '../components/footer/Footer';
 import '../style2.css';
 
 
-function Home(props) {
+function Home( props) {
     return(
        <div className='container'>
             <Navbar />
