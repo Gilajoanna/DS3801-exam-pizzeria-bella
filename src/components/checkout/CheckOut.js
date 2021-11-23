@@ -27,7 +27,7 @@ function CheckOut({ addPizzaToCart, addPastaToCart, addSideDishesToCart, addBeve
                     <Box className="order-container" sx={{ backgroundColor: '#FFFFFF', borderRadius: 1, m: 10, border: 1, borderColor: '#A3A29E', padding: 5 }}>
                         <Grid container spacing={4}>
                             <Grid item xs={12} lg={7}>
-                                <Typography component="h1" variant="h6" color="text.secondary" sx={{ letterSpacing: '4px', fontFamily: 'Roboto' }}>
+                                <Typography component="h1" variant="h6" color="text.secondary" sx={{ letterSpacing: '4px', fontFamily: 'Roboto', mb: 4 }}>
                                     YOUR ORDER
                                 </Typography>
                                 <Basket 

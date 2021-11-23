@@ -9,13 +9,13 @@ function Basket({ shoppingCartItems, removeItem }) {
         <div>
             <div> {shoppingCartItems.length === 0 && <div>Shopping cart is empty</div>} </div>
             {shoppingCartItems.map((item) => (
-                <Grid containers spacing ={2} key={item.id} className="product-row">
-                    <Grid item xs={4} lg={4}> 
+                <Grid containers spacing ={2} key={item.id} className="product-row" sx={{ }}>
+                    <Grid item xs={4} lg={6}> 
                         {item.name} 
                     </Grid>
-                    <Grid item xs={4} lg={4}>
+                    <Grid item xs={4} lg={8}>
                         {item.qty} x {item.price}kr
-                        <Button onClick={() => removeItem(item)} className="remove-item" sx={{ ml: 10, color: 'black' }}>
+                        <Button sx={{ }} onClick={() => removeItem(item)} className="remove-item" sx={{ ml: 10, color: 'black' }}>
                                 remove
                         </Button></Grid>
                 </Grid>
@@ -24,8 +24,8 @@ function Basket({ shoppingCartItems, removeItem }) {
             {shoppingCartItems.length !== 0 && (
                 <>
                 <hr></hr>
-                <div className="price-row">
-                    <div>Totalt Price</div>
+                <div className="total-price-row">
+                    <div>Total Price</div>
                     <div>{itemsPrice}kr</div>
                 </div>
                 </>
