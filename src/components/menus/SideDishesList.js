@@ -20,12 +20,12 @@ function SideDishesList({ sideDishesList, addSideDishesToCart }) {
 
 
     return (
-        <main>
-            <head>
+        <>
+            
                 <Navbar/>
                 <HeroImg />
-            </head>
-            <body>
+       
+            <main>
                 <Container className="sideDishesMenu-container" maxWidth="xl"> 
                 <Typography className="pizzaMenu-header" component="h1" variant="h2" color="text.secondary" 
                             sx={{ fontWeight: '700', justifyContent:'center', letterSpacing: '8px', mt: '2em', mb: '1em' }}>
@@ -67,11 +67,11 @@ function SideDishesList({ sideDishesList, addSideDishesToCart }) {
                     </Button>
                 </Box>
                 </Container>
-            </body>
-            <footer>
+            </main>
+           
             <Footer />
-            </footer>
-        </main>
+            
+        </>
     )
 }
 export default SideDishesList;

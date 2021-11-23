@@ -38,22 +38,22 @@ function CheckOut({ addPizzaToCart, addPastaToCart, addSideDishesToCart, addBeve
                                     removeItem={removeItem} 
                                     shoppingCartItems={shoppingCartItems} 
                                     />
-                                <Button sx={{ backgroundColor: '#1D1F2C', mt: 2, fontSize: 18, width: '15em', color: 'white' }} variant="text">GO TO PAYMENT</Button>
+                                <Button sx={{ backgroundColor: '#1D1F2C', mt: 2, fontSize: 18, width: '15em', color: 'white', letterSpacing: '4px' }} variant="text">GO TO PAYMENT</Button>
                             </Grid> 
                             <Grid item xs={12} lg={5}>
                                 <Grid item lg={12}>
                                     <Button onClick ={() => goToOrderOnline()} 
-                                        sx={{ backgroundColor: '#1D1F2C', mb: 1, fontSize: 18, width: '20em', color: 'white'  }} variant="text" size="large">ORDER MORE FOOD?
+                                        sx={{ backgroundColor: '#1D1F2C', mb: 1, fontSize: 18, width: '20em', color: 'white', letterSpacing: '4px'  }} variant="text" size="large">ORDER MORE FOOD?
                                     </Button>
                                 </Grid>
                                 <Grid item lg={12}>             
                                     <Button onClick ={() => goToSideDishesMenu()} 
-                                        sx={{ backgroundColor: '#1D1F2C', mb: 1, fontSize: 18, width: '20em', color: 'white'  }} variant="text" size="large">WANT ANOTHER SIDE DISH?
+                                        sx={{ backgroundColor: '#1D1F2C', mb: 1, fontSize: 18, width: '20em', color: 'white', letterSpacing: '4px'  }} variant="text" size="large">WANT ANOTHER SIDE DISH?
                                     </Button>
                                 </Grid>
                                 <Grid item lg={12}>    
                                     <Button onClick ={() => goToBeveragesMenu()} 
-                                    sx={{ backgroundColor: '#1D1F2C', fontSize: 18, width: '20em', color: 'white'  }} variant="text" size="large">FORGOT TO ADD DRINKS?
+                                    sx={{ backgroundColor: '#1D1F2C', fontSize: 18, width: '20em', color: 'white', letterSpacing: '4px'  }} variant="text" size="large">FORGOT TO ADD DRINKS?
                                     </Button> 
                                 </Grid>
                             </Grid>     

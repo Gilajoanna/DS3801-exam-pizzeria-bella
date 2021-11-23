@@ -30,11 +30,9 @@ function PizzaList({ pizzaList, props, addPizzaToCart}) {
  
 
     return (  
-        <body>
-        <header>
-            <Navbar/>
-            <HeroImg className='hero-image' img={images[1]}/>
-        </header>
+        <>
+        <Navbar/>
+        <HeroImg className='hero-image' img={images[1]}/>
         <main>
             <Container className="pizzaMenu-container" maxWidth="xl">
                 
@@ -65,13 +63,15 @@ function PizzaList({ pizzaList, props, addPizzaToCart}) {
                     </Button>
                 </Box>
              
-                <Grid container spacing={1}>
-                    {pizzaList.map((pizza, index) => {
-                        return <Grid item xs={12} md ={6} lg={6} key={index} >
-                        <PizzaCard addPizzaToCart={addPizzaToCart} pizza={pizza} />
-                        </Grid>
-                    })}
-                </Grid>
+                <Box sx={{ justifyContent: 'center', alignContent: 'center',  alignItems: 'center', flexDirection: 'row', display: 'flex', ml: '5em', mr: '5em' }}>
+                    <Grid container spacing={1} sx={{}}>
+                        {pizzaList.map((pizza, index) => {
+                            return <Grid item xs={12} md ={6} lg={6} key={index} >
+                            <PizzaCard addPizzaToCart={addPizzaToCart} pizza={pizza} />
+                            </Grid>
+                        })}
+                    </Grid>
+                </Box>
                 
                 <Box sx={{ justifyContent: 'center', alignContent: 'center',  alignItems: 'center', flexDirection: 'row', display: 'flex' }}>
                     <Button onClick ={() => goToCheckOut()} 
@@ -86,7 +86,7 @@ function PizzaList({ pizzaList, props, addPizzaToCart}) {
             </Container> 
         </main>
         <Footer /> 
-        </body>
+        </>
     );
     /*    
     <body maxWidth="xl">

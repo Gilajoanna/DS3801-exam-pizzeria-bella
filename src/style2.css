@@ -109,7 +109,6 @@
     font-family: Roboto, sans-serif, 700;
     font-weight: 700;
     margin: auto;
-    
     letter-spacing: 8px;
 }
 
@@ -161,11 +160,13 @@
 
 }
 
-
+p{
+    font-family: Roboto, sans-serif;
+    letter-spacing: 4px;
+}
 
 .card {
-    background-color: #F8F6F2;
-    display:inline;
+    background-color: #F8F6F2; 
 }
 
 .textBox-menus{
@@ -174,39 +175,28 @@
     width: 25%;
 }
 
+/*
+.MuiGrid-root{
+    size-adjust:inherit;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+*/
+
 
 .MuiCard-root{
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
 }
 
-.MuiCard-root{
+.MuiPaper-root{
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.MuiCardActions-root{
-    margin-top: auto;
-}
-*/ 
-
-
-.title{
-    
-}
-
-.description {
-
-}
-
-.allergens {
-
-}
-
-.price {
-
-}
 
 .toNextMenu-button{
     width: 9em;
@@ -217,7 +207,6 @@
 
 .add-button{
     float: right;
-    
 }
 
 .home {

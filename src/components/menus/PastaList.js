@@ -1,7 +1,6 @@
 import { Container, Grid, Typography, Button, Box } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
-
 import PastaCard from './PastaCard';
 import Navbar from '../navbar/Navbar';
 import HeroImg from '../HeroImg';
@@ -23,11 +22,9 @@ function PastaList({pastaList, addPastaToCart}) {
 
 
     return (
-        <body>
-        <header>
-            <Navbar/>
-            <HeroImg className='hero-image' img={images[2]}/>
-        </header>
+        <>
+        <Navbar/>
+        <HeroImg className='hero-image' img={images[2]}/>
         <main>
             <Container className="pastaMenu-container" maxWidth="xl">
                 
@@ -72,10 +69,8 @@ function PastaList({pastaList, addPastaToCart}) {
                     </Box>
             </Container>
         </main>
-        <footer>
         <Footer />
-        </footer>
-        </body>
+        </>
     );
 }
 
