@@ -26,8 +26,7 @@ function PastaList({pastaList, addPastaToCart}) {
         <Navbar/>
         <HeroImg className='hero-image' img={images[2]}/>
         <main>
-            <Container className="pastaMenu-container" maxWidth="xl">
-                
+            <Container className="pastaMenu-container" maxWidth="100%">
                 <Typography className="pastaMenu-header" component="h1" variant="h2" color="text.secondary" 
                             sx={{ fontWeight: '700', justifyContent:'center', letterSpacing: '8px', mt: '2em', mb: '1em' }}>
                             PASTA
@@ -55,18 +54,22 @@ function PastaList({pastaList, addPastaToCart}) {
                             className='toNextMenu-button' variant="outlined">BEVERAGE
                     </Button>
                 </Box>
-                    <Grid container spacing={1}>
+                <Box sx={{ justifyContent: 'center', alignContent: 'center',  alignItems: 'center', flexDirection: 'row', display: 'flex', ml: '5em', mr: '5em' }}>
+                    <Grid container spacing={1} sx={{}}>
                         {pastaList.map((pasta, index) => {
-                            return <Grid item xs={12} lg={6} key={index} sx={{ justifyContent: 'space-evenly'}}><PastaCard addPastaToCart={addPastaToCart} pasta={pasta}/></Grid>
+                            return <Grid item xs={12} md={6} lg={6} key={index} >
+                            <PastaCard addPastaToCart={addPastaToCart} pasta={pasta}/>
+                            </Grid>
                         })}
                     </Grid>
+                </Box>
                     
-                    <Box sx={{ justifyContent: 'center', alignContent: 'center',  alignItems: 'center', flexDirection: 'row', display: 'flex' }}>
-                        <Button onClick ={() => goToCheckOut()} 
-                                sx={{ backgroundColor: '#1D1F2C', fontSize: 18, width: '18em', height: '3em', color: 'white', letterSpacing: '4px', mt: '5em', mb:'5em' }} 
-                                variant="text" size="medium"> CHECKOUT
-                        </Button>
-                    </Box>
+                <Box sx={{ justifyContent: 'center', alignContent: 'center',  alignItems: 'center', flexDirection: 'row', display: 'flex' }}>
+                    <Button onClick ={() => goToCheckOut()} 
+                            sx={{ backgroundColor: '#1D1F2C', fontSize: 18, width: '18em', height: '3em', color: 'white', letterSpacing: '4px', mt: '5em', mb:'5em' }} 
+                            variant="text" size="medium"> CHECKOUT
+                    </Button>
+                </Box>
             </Container>
         </main>
         <Footer />

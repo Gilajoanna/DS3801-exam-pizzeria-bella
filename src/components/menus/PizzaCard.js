@@ -1,35 +1,33 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Card, CardHeader, CardContent, Typography, Button, Grid, Link, CardAction, title} from '@mui/material';
+import { Card, CardHeader, CardContent, Typography, Button, Grid} from '@mui/material';
 
 import '../../style2.css';
 
 
-export default function PizzaCard({ pizza, addPizzaToCart, props, title }){
+export default function PizzaCard({ pizza, addPizzaToCart }){
 
     
     return (
-    <main>
+    <>
         <Grid item lg={12} sx={{flexDirection: 'column'}}>
-            <Card className="card" style={{backgroundColor: 'yellow', display: 'flex',  flexDirection: 'column', spacing:1}}  sx={{flexGrow: 1, flexBasis: 0, maxWidth:'50rem', maxHeight: '30rem', minWidth: 100}}>
-                                    
-            <Grid item xs={12} lg={8} style={{display: 'flex', height: 'fitContent', justifyContent: 'center'}}>
-                    <CardHeader/>
+        <Card className="card" elevation={0} sx={{ backgroundColor: '#F8F6F2',fontsize: 16,  bacgroundColor: '#1D1F2C'}} color="text.secondary" gutterBottom>                      
+            <Grid item xs={12} lg={8}>
+                <CardHeader sx={{ml: '2em', mr: '2em'}}/>
+                    <Button onClick={() => addPizzaToCart(pizza)}
+                            sx={{ justifyContent: 'flex-end', color: '#1D1F2C', backgroundColor: '#FFFFFF', letterSpacing: '4px', fontSize: 18, borderColor: '#1D1F2C', ml: '2em', mr: '3em', mt:'1em' }} 
+                            className='add-button' variant="outlined" size="small">ADD
+                    </Button>
                     <CardContent>
-                        <Button onClick={() => addPizzaToCart(pizza)}
-                                sx={{ alignItem:'right', justifyContent: 'flex-end', color: '#1D1F2C', backgroundColor: '#FFFFFF', letterSpacing: '4px', fontSize: 18, borderColor: '#1D1F2C' }} 
-                                className='add-button' variant="outlined" size="small">ADD
-                        </Button>
                         <Typography sx={{ fontSize: 18 }} color="text.secondary">{ pizza.name }</Typography>
-                        <Typography className="description" sx={{ fontSize: 14 }} color="text.secondary"> { pizza.description }</Typography>
-                        <Typography className="allergens" sx={{ fontsize: 10}} color="text.secondary" gutterBottom> { pizza.allergens }   </Typography>
-                        <Typography variant="h6" className="price" sx={{ fontsize: 10}} color="text.secondary" gutterBottom> { pizza.price }   
-                        </Typography>                
+                        <Typography sx={{ fontSize: 14 }} color="text.secondary" className="description" > { pizza.description }</Typography>
+                        <Typography sx={{ fontsize: 10}} color="text.secondary" className="allergens" gutterBottom> { pizza.allergens }</Typography>
+                        <Typography sx={{ fontsize: 10}} variant="h6" className="price" color="text.secondary" gutterBottom> { pizza.price }kr</Typography>                
                     </CardContent>
+                    <CardHeader/>
                 </Grid>
             </Card>
         </Grid>
-    </main>
+    </>
   
     )
 }

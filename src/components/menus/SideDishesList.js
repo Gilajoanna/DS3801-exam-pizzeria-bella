@@ -21,14 +21,12 @@ function SideDishesList({ sideDishesList, addSideDishesToCart }) {
 
     return (
         <>
-            
-                <Navbar/>
-                <HeroImg />
-       
+            <Navbar/>
+            <HeroImg />
             <main>
-                <Container className="sideDishesMenu-container" maxWidth="xl"> 
+                <Container className="sideDishesMenu-container" maxWidth="100%"> 
                 <Typography className="pizzaMenu-header" component="h1" variant="h2" color="text.secondary" 
-                            sx={{ fontWeight: '700', justifyContent:'center', letterSpacing: '8px', mt: '2em', mb: '1em' }}>
+                                sx={{ fontWeight: '700', justifyContent:'center', letterSpacing: '8px', mt: '2em', mb: '1em' }}>
                             SIDE DISHES
                 </Typography>
                 <Box className="pizzaMenu-text" sx={{ fontWeight: '700', justifyContent:'center' }}>
@@ -37,28 +35,33 @@ function SideDishesList({ sideDishesList, addSideDishesToCart }) {
                                 took a galley of type and scrambledit to make a type specimen book.
                     </Typography>
                 </Box>
-                <Box sx={{ justifyContent: 'center', justifyContent:"space-between", textAlign: 'center', mb: '5em' }} item xs={6}>
-                    <Button style ={{ backgroundColor: '#FFFFFF', color: '#1D1F2C', letterSpacing: '4px', fontSize: 24, borderColor: '#1D1F2C', variant:"outlined"}} 
-                            onClick ={() => goToPizzaMenu()} 
+
+                <Box sx={{ justifyContent: 'center', textAlign: 'center', mb: '5em' }} item xs={6}>
+                    <Button onClick ={() => goToPizzaMenu()} 
+                            style ={{ backgroundColor: '#FFFFFF', color: '#1D1F2C', letterSpacing: '4px', fontSize: 24, borderColor: '#1D1F2C'}} 
                             className='toNextMenu-button' variant="outlined">PIZZA 
                     </Button>
 
                     <Button style ={{ backgroundColor: '#FFFFFF', color: '#1D1F2C', letterSpacing: '4px', fontSize: 24, borderColor: '#1D1F2C', variant:"outlined", marginLeft: '10px', marginRight: '10px'}} 
                             onClick ={() => goToPastaMenu()}
-                            className='toNextMenu-button' variant="outlined">PASTA 
+                            className='toNextMenu-button' variant="outlined">PASTA
                     </Button>
 
-                    <Button style ={{ backgroundColor: '#FFFFFF', color: '#1D1F2C', letterSpacing: '4px', fontSize: 24, borderColor: '#1D1F2C', variant:"outlined"}} 
-                            onClick ={() => goToBeveragesMenu()}
-                            className='toNextMenu-button' variant="outlined">BEVERAGE
+                    <Button onClick ={() => goToBeveragesMenu()}
+                            style ={{ backgroundColor: '#FFFFFF', color: '#1D1F2C', letterSpacing: '4px', fontSize: 24, borderColor: '#1D1F2C', variant:"outlined"}}  
+                            className='toNextMenu-button' variant="outlined">BEVERAGES
                     </Button>
                 </Box>
 
-                <Grid container spacing={1}>
-                    {sideDishesList.map((sideDish, index) => {
-                        return <Grid item xs={12} lg={6} key={index}><SideDishesCard addSideDishesToCart={addSideDishesToCart} sideDish={sideDish}/></Grid>
-                    })}
-                </Grid>
+                <Box sx={{ justifyContent: 'center', alignContent: 'center',  alignItems: 'center', flexDirection: 'row', display: 'flex', ml: '5em', mr: '5em' }}>
+                    <Grid container spacing={1}>
+                        {sideDishesList.map((sideDish, index) => {
+                            return <Grid item xs={12} md ={6} lg={6} key={index}>
+                            <SideDishesCard addSideDishesToCart={addSideDishesToCart} sideDish={sideDish}/>
+                            </Grid>
+                        })}
+                    </Grid>
+                </Box>
                
                 <Box sx={{ justifyContent: 'center', alignContent: 'center',  alignItems: 'center', flexDirection: 'row', display: 'flex' }}>
                     <Button onClick ={() => goToCheckOut()} 
@@ -68,9 +71,7 @@ function SideDishesList({ sideDishesList, addSideDishesToCart }) {
                 </Box>
                 </Container>
             </main>
-           
             <Footer />
-            
         </>
     )
 }
