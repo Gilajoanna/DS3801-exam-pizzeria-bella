@@ -16,7 +16,7 @@ function Basket({ shoppingCartItems, removeItem }) {
                             {item.name} 
                         </Grid>
                         <Grid item xs={4} lg={8}>
-                            {item.qty} x {item.price}kr
+                            {item.qty} x {item.price} KR
                             <Button sx={{ }} onClick={() => removeItem(item)} className="remove-item" sx={{ ml: 10, color: 'black' }}>
                                 <RemoveShoppingCartIcon aria-label="remove item from cart" sx={{ justifyContent: 'flex-end', color: '#1D1F2C', fontSize: 24 }} />
                             </Button>
@@ -30,8 +30,8 @@ function Basket({ shoppingCartItems, removeItem }) {
                 <hr></hr>
                 <div className="total-price-row">
                 <Typography sx={{ fontFamily: 'Roboto', color: '#1D1F2C' }}>
-                    <div><strong>Total Price</strong></div>
-                    <div>{itemsPrice}kr</div>
+                    <div><strong>TOTAL PRICE</strong></div>
+                    <div>{itemsPrice} KR</div>
                 </Typography>
                 </div>
                 </>
