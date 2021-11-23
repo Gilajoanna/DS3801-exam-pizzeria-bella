@@ -61,14 +61,14 @@ function BeveragesList({ beveragesList, addBeverageToCart, props }) {
                 
                 <Grid container spacing={1}>
                         {beveragesList.map((beverage, index) => {
-                            return <Grid item xs={12} lg={6} key={index}><BeveragesCard addBeverageToCart={addBeverageToCart} beverage={beverage}/></Grid>
+                            return <Grid item xs={12} md={6} lg={6} key={index}><BeveragesCard addBeverageToCart={addBeverageToCart} beverage={beverage}/></Grid>
                         })}
                 </Grid>
             
                 <Box sx={{ justifyContent: 'center', alignContent: 'center',  alignItems: 'center', flexDirection: 'row', display: 'flex' }}>
                     <Button onClick ={() => goToCheckOut()} 
                             sx={{ backgroundColor: '#1D1F2C', fontSize: 18, width: '18em', height: '3em', color: 'white', letterSpacing: '4px', mt: '5em', mb:'5em' }} 
-                            variant="text" size="medium"> CHECKOUT
+                            className="darkButton-medium" variant="text" size="medium"> CHECKOUT
                     </Button>
                 </Box>
             </Container>

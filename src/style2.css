@@ -143,10 +143,29 @@
 
 
 /*GLOBAL*/
+
+.darkButton-small{
+
+}
+
+.darkButton-medium{
+    background-color: #1D1F2C;
+    font-size: 18px;
+    width: 18em;
+    height: 3em;
+    color: white;
+    letter-spacing: 4px; 
+}
+
+.darkButton-large{
+
+}
+
+
+
 .card {
     background-color: #F8F6F2;
     display:inline;
-   
 }
 
 .textBox-menus{
