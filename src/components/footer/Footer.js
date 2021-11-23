@@ -6,8 +6,8 @@ function Footer() {
         <footer className="footer-container">
             <Container maxWidth="xl">
                 <Box sx={{ m: 10 }}>
-                    <Grid container spacing={3}>
-                        <Grid item xs={12} lg={4} sx={{ mr: 39 }}>
+                    <Grid container spacing={35}>
+                        <Grid item xs={12} md={9} lg={6}>
                             <Typography component="h1" variant="h6" sx={{ letterSpacing: '4px' }}>
                                 ABOUT US:
                                 <Typography>
@@ -16,6 +16,8 @@ function Footer() {
                                 Large families like to meet over a meal and eat and talk for hours. 
                                 And the longer the meal lasts, the more quality time with the family. 
                                 Then, of course, they also serve many dishes.
+                                Since we are a small and cozy restaurant with just a little space, 
+                                we do not take table reservations.
                                 </Typography>
                             </Typography>
                             <Typography component="h1" variant="h6" sx={{ letterSpacing: '4px', mt: 4 }}>
@@ -37,7 +39,7 @@ function Footer() {
                                 </Typography>
                             </Typography>
                         </Grid>
-                        <Grid item xs={12} lg={5}>
+                        <Grid item xs={12} lg={6}>
                             <Box sx={{ borderRadius: 1, border: 1, borderColor: '#1D1F2C', padding: 5, width: '20em' }}>
                                 <form noValidate autoComplete='off'>
                                     <Typography component="h1" variant="h6" sx={{ letterSpacing: '4px', mb: 1 }}>
