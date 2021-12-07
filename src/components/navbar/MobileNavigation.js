@@ -6,7 +6,6 @@ import { Typography, Grid } from "@mui/material";
 import { Link } from 'react-router-dom'
 
 import '../../style.css';
-import '../../style2.css';
 
 function MobileNavigation({ shoppingCartItems }) {
 

@@ -1,13 +1,11 @@
 import React from 'react';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { Container, Box, TextField, Grid, Typography, Button, Modal } from '@mui/material';
 
 import Navbar from '../navbar/Navbar';
 import Footer from '../footer/Footer';
-import { TryRounded } from '@mui/icons-material';
 
-function Payment({itemsPrice}) {
+function Payment() {
 
     const style = {
         position: 'absolute',
@@ -107,7 +105,8 @@ function Payment({itemsPrice}) {
 
                                     
                                     <Button disabled={!name || !address || !phone || !card || !exDate || !cvc} type="submit" className="submit-button"  onClick={handleOpen} 
-                                            sx={{backgroundColor: '#1D1F2C', fontSize: 18, width: '18em', height: '3em', color: 'white', letterSpacing: '4px', mt: '2em', mb:'2em' }} 
+                                            sx={{backgroundColor: '#1D1F2C', "&:hover": {
+                                                backgroundColor: '#1D1F2C', border: "solid lightgrey 1px"},fontSize: 18, width: '18em', height: '3em', color: 'white', letterSpacing: '4px', mt: '2em', mb:'2em' }} 
                                             variant="text" size="medium"> PURCHASE
                                     </Button>
                               

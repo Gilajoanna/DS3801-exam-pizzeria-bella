@@ -8,7 +8,6 @@ import images from '../../images/images';
 import Footer from '../footer/Footer';
 
 import '../../style.css';
-import '../../style2.css';
 
 function PastaList({pastaList, addPastaToCart}) {
 

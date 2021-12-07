@@ -1,10 +1,13 @@
 import { Button, Grid, Typography } from '@mui/material';
-import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
 import CloseIcon from '@mui/icons-material/Close';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import React from 'react';
 
 function Basket({ shoppingCartItems, removeItem }) {
+
+    const navigate = useNavigate()
+
+    const goToPayment = () =>{ navigate("/payment") }
 
     const itemsPrice = shoppingCartItems.reduce((a, b) => a + b.price * b.qty, 0);
 
@@ -38,7 +41,8 @@ function Basket({ shoppingCartItems, removeItem }) {
                 </div>
                 </>
             )}
-            <Button component={ Link } to="/payment" itemsPrice={itemsPrice} sx={{ backgroundColor: '#1D1F2C', mt: 2, fontSize: 18, width: '15em', color: 'white', letterSpacing: '4px' }} variant="text">GO TO PAYMENT</Button>
+            <Button className="check-out-button" onClick ={() => goToPayment()} itemsPrice={itemsPrice} sx={{ backgroundColor: '#1D1F2C', "&:hover": {
+            backgroundColor: '#1D1F2C', border: "solid lightgrey 1px"}, mt: 2, color: 'white', letterSpacing: '4px' }} variant="text">GO TO PAYMENT</Button>
         </div>
     );
 }

@@ -5,9 +5,9 @@ import SideDishesCard from './SideDishesCard';
 import Navbar from '../navbar/Navbar';
 import HeroImg from '../HeroImg';
 import Footer from '../footer/Footer';
+import images from '../../images/images';
 
 import '../../style.css';
-import '../../style2.css';
 
 function SideDishesList({ sideDishesList, addSideDishesToCart }) {
 
@@ -22,7 +22,7 @@ function SideDishesList({ sideDishesList, addSideDishesToCart }) {
     return (
         <>
             <Navbar/>
-            <HeroImg />
+            <HeroImg className='hero-image' img={images[4]}/>
             <main>
                 <Container className="sideDishesMenu-container" maxWidth="100%"> 
                 <Typography className="pizzaMenu-header" component="h1" variant="h2" color="text.secondary" 

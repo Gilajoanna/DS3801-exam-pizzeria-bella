@@ -11,9 +11,7 @@ import PizzaList from "./components/menus/PizzaList";
 import PastaList from "./components/menus/PastaList";
 import SideDishesList from './components/menus/SideDishesList';
 import BeveragesList from './components/menus/BeveragesList';
-import './style2.css';
-import PizzaCard from "./components/menus/PizzaCard";
-
+import './style.css';
 
 
 function App() {
@@ -178,7 +176,7 @@ function App() {
               <Route exact path="/" element={ <Home img={ images[0] } /> } />
                 <Route path= "/pizzaList" element={ <PizzaList pizzaList={statePizza} addPizzaToCart={addPizzaToCart}/>}/> 
                 <Route path= "/pastaList" element={ <PastaList pastaList={statePasta} addPastaToCart={addPastaToCart} />}/> 
-                <Route path= "/sideDishesList" element={ <SideDishesList sideDishesList={stateSideDishes} addSideDishesToCart={addSideDishesToCart}/> } />
+                <Route path= "/sideDishesList" element={ <SideDishesList sideDishesList={stateSideDishes} addSideDishesToCart={addSideDishesToCart} /> } />
                 <Route path= "/beveragesList" element={ <BeveragesList beveragesList={stateBeverage} addBeverageToCart={addBeverageToCart} img={ images[1] } /> } />
                 <Route path= "/checkOut" 
                   element={ <CheckOut 
@@ -197,6 +195,5 @@ function App() {
       
     );
 }
-
 
 export default App;

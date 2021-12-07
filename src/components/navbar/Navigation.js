@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 import NavBarLinks from './NavBarLinks';
 
 import '../../style.css';
-import '../../style2.css';
 
 function Navigation({ shoppingCartItems }) {
 

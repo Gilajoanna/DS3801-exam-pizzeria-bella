@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, Typography, Button, Grid } from '@mui/material';
 
-import '../../style2.css';
+import '../../style.css';
 
 export default function BeveragesCard({ beverage, addBeverageToCart }){
 
@@ -9,7 +9,7 @@ export default function BeveragesCard({ beverage, addBeverageToCart }){
     <>
         <Grid item lg={12} sx={{flexDirection: 'column'}}>
             <Card className="card" elevation={0} sx={{ backgroundColor: '#F8F6F2',fontsize: 16,  bacgroundColor: '#1D1F2C'}} color="text.secondary" gutterBottom> 
-            <Grid item xs={12} lg={9}>
+            <Grid item xs={12} md={6} lg={9}>
                 <CardHeader sx={{ml: '2em', mr: '2em'}}/>
                     <Button onClick={() => addBeverageToCart(beverage)}
                         sx={{ justifyContent: 'flex-end', color: '#1D1F2C', backgroundColor: '#FFFFFF', letterSpacing: '4px', fontSize: 18, borderColor: '#1D1F2C', ml: '2em', mr: '3em', mt:'1em' }} 

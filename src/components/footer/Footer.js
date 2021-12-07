@@ -4,9 +4,9 @@ import React from 'react';
 function Footer() {
     return(
         <footer className="footer-container">
-            <Container maxWidth="xl">
+            <Container maxWidth="100%">
                 <Box sx={{ m: 10 }}>
-                    <Grid container spacing={35}>
+                    <Grid container spacing={15}>
                         <Grid item xs={12} md={9} lg={6}>
                             <Typography component="h1" variant="h6" sx={{ letterSpacing: '4px' }}>
                             <a id="about-us">ABOUT US:</a>
@@ -39,7 +39,7 @@ function Footer() {
                                 </Typography>
                             </Typography>
                         </Grid>
-                        <Grid item xs={12} lg={6}>
+                        <Grid item xs={12} md={9} lg={6}>
                             <Box sx={{ borderRadius: 1, border: 1, borderColor: '#1D1F2C', padding: 5, width: '20em' }}>
                                 <form noValidate autoComplete='off'>
                                     <Typography component="h1" variant="h6" sx={{ letterSpacing: '4px', mb: 1 }}>

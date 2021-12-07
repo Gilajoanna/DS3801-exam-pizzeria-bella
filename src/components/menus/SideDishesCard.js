@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, Typography, Button, Grid } from '@mui/material';
 
-import '../../style2.css';
+import '../../style.css';
 
 export default function SideDishesCard({sideDish, addSideDishesToCart}){
 

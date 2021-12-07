@@ -10,7 +10,6 @@ import Navigation from './Navigation';
 import MobileNavigation from './MobileNavigation';
 
 import '../../style.css';
-import '../../style2.css';
 
 function Navbar({ shoppingCartItems }) {
     return (
